@@ -5,7 +5,8 @@
   Features:
   - Typing Animation Carousel (Focus Line: Cloud Infrastructure | Linux | DevOps Automation)
   - Ambient Cloud Network Node Canvas Background Animation
-  - Form validation & interactive alerts
+  - Ultra-Smooth 3D GPU-Accelerated Scroll Reveal Observer (reveal-fade-up, reveal-slide-left, reveal-slide-right, reveal-scale-up)
+  - Client-side Form Validation & Interactive Alert
   - Step-by-step educational comments throughout JavaScript code
   ========================================================================
 */
@@ -137,7 +138,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // ========================================================================
-  // STEP 3: CONTACT FORM VALIDATION
+  // STEP 3: ULTRA-SMOOTH 3D SCROLL REVEAL OBSERVER
+  // ========================================================================
+  const revealElements = document.querySelectorAll('.reveal-fade-up, .reveal-slide-left, .reveal-slide-right, .reveal-scale-up');
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.12
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+
+  // ========================================================================
+  // STEP 4: CONTACT FORM VALIDATION
   // ========================================================================
   const contactForm = document.getElementById('contactForm');
   const formAlert = document.getElementById('formAlert');

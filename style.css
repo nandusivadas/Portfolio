@@ -2,21 +2,19 @@
   ========================================================================
   STYLE.CSS - NANDU SIVADAS CLOUD & DEVOPS PORTFOLIO
   ========================================================================
-  Features & Updates:
-  - Technical Skills section background layer removed for seamless flow.
-  - Low opacity background wallpaper (bg_cloud.jpg < 50% opacity).
-  - Clean Profile Avatar with 3D Depth Breathing Movement (front & back tilt).
-  - Professional Continuous Animated Tech Logo Marquee Strip across interface.
-  - Hero Badge: Aspiring Cloud & DevOps Enthusiast.
-  - Redesigned Technical Skills Grid: 10 syllabus categories in sleek glass cards.
-  - Top Featured Project Highlight (RHCE Capstone Project #1).
-  - PDF Documentation Links for all projects.
+  Refinements:
+  - Correct Visual Hierarchy: Main Section Headings (2.15rem) made significantly larger and prominent.
+  - Inner card headings (projects, degrees, job titles) set to a balanced 1.15rem - 1.25rem size so main section headings dominate cleanly.
+  - Profile Avatar Liquid Float & Breathing Glow Animation.
+  - Clean 'WHAT I FOCUS ON' card styling (headings only, no sub-content).
+  - Tech Stack Cards matching site dark cyan theme.
+  - Get In Touch Translucent Background Layer.
   - Step-by-step educational comments for CSS rules.
   ========================================================================
 */
 
 /* ------------------------------------------------------------------------
-   STEP 1: ROOT DESIGN TOKENS & COLOR VARIABLES
+   STEP 1: ROOT DESIGN TOKENS & UNIFIED CYAN COLOR PALETTE
    ------------------------------------------------------------------------
 */
 :root {
@@ -25,12 +23,12 @@
   --bg-card: #151e32;
   --bg-card-hover: #1e293b;
   --border-slate: #27354f;
+  --border-cyan-subtle: rgba(0, 242, 254, 0.2);
 
-  /* Accents */
+  /* Primary Theme Accents (Vibrant Cyan & Electric Blue) */
   --cyan-accent: #00f2fe;
   --blue-accent: #38bdf8;
-  --purple-accent: #7f00ff;
-  --cyan-glow: rgba(0, 242, 254, 0.25);
+  --cyan-glow: rgba(0, 242, 254, 0.35);
 
   /* Text Colors */
   --text-white: #ffffff;
@@ -38,7 +36,7 @@
   --text-slate: #cbd5e1;
   --text-muted-light: #94a3b8;
 
-  /* Fonts & Transitions */
+  /* Typography & Transitions */
   --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Inter', sans-serif;
   --transition: 0.25s ease-in-out;
@@ -67,7 +65,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   font-family: var(--font-heading);
 }
 
-/* Field Background Image Overlay (< 50% opacity as requested) */
+/* Background Image Overlay (< 50% opacity) */
 .bg-cloud-image-overlay {
   position: fixed;
   top: 0;
@@ -78,7 +76,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.18; /* Well below 50% opacity */
+  opacity: 0.18;
   z-index: -2;
   pointer-events: none;
 }
@@ -111,18 +109,21 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 /* ------------------------------------------------------------------------
-   STEP 3: UTILITY & ACCENT BUTTONS
+   STEP 3: UTILITY & UNIFIED ACCENT BUTTONS
    ------------------------------------------------------------------------
 */
 .text-cyan { color: var(--cyan-accent) !important; }
 .text-white { color: var(--text-white) !important; }
 .text-slate { color: var(--text-slate) !important; }
-.extra-small { font-size: 0.75rem; }
-.bg-card-dark { background-color: #0f172a !important; }
+.extra-small { font-size: 0.775rem; }
 
 .bg-slate-pill {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--border-slate);
+}
+
+.bg-dark-pill {
+  background: rgba(15, 23, 42, 0.6) !important;
 }
 
 .bg-accent-subtle {
@@ -134,38 +135,69 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   color: var(--cyan-accent) !important;
 }
 
-.border-slate {
-  border-color: var(--border-slate) !important;
+.badge-accent-subtitle {
+  color: var(--cyan-accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-.gap-1-5 {
-  gap: 0.4rem !important;
+.border-cyan-subtle {
+  border-color: var(--border-cyan-subtle) !important;
 }
 
-/* Action Buttons */
-.btn-accent {
+.max-w-700 {
+  max-width: 700px;
+}
+
+.py-2-5 {
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
+}
+
+/* Electric Cyan 'Hire Me' Navbar Button */
+.btn-hire-me-cyan {
   background: linear-gradient(135deg, var(--cyan-accent), var(--blue-accent));
   color: #020617 !important;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px var(--cyan-glow);
   transition: var(--transition);
 }
 
-.btn-accent:hover {
-  opacity: 0.92;
+.btn-hire-me-cyan:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px var(--cyan-glow);
+  box-shadow: 0 6px 20px var(--cyan-glow);
+}
+
+/* Cyan Gradient Accent Button */
+.btn-accent-cyan, .btn-accent {
+  background: linear-gradient(135deg, var(--cyan-accent), var(--blue-accent));
+  color: #020617 !important;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.btn-accent-cyan:hover, .btn-accent:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--cyan-glow);
 }
 
 .btn-outline-light-custom {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text-light);
-  border: 1px solid var(--border-slate);
+  border: 1px solid var(--border-cyan-subtle);
+  border-radius: 10px;
   transition: var(--transition);
 }
 
 .btn-outline-light-custom:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 242, 254, 0.1);
   border-color: var(--cyan-accent);
   color: var(--cyan-accent);
   transform: translateY(-2px);
@@ -178,7 +210,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 .custom-navbar {
   background: rgba(11, 17, 32, 0.95);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-slate);
+  border-bottom: 1px solid var(--border-cyan-subtle);
   padding: 0.6rem 0;
   z-index: 1050;
 }
@@ -208,15 +240,15 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 /* ------------------------------------------------------------------------
-   STEP 5: HERO SECTION & CLEAN 3D PROFILE DEPTH ANIMATION
+   STEP 5: HERO SECTION & LIQUID FLOAT PROFILE AVATAR ANIMATION
    ------------------------------------------------------------------------
 */
 .hero-wrapper {
   background: radial-gradient(circle at 50% 10%, rgba(23, 35, 59, 0.8) 0%, var(--bg-main) 70%);
 }
 
-.min-vh-75 {
-  min-height: 75vh;
+.min-vh-70 {
+  min-height: 70vh;
 }
 
 .hero-badge {
@@ -251,6 +283,10 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   line-height: 1.2;
 }
 
+.hero-title-lg {
+  font-size: 2.5rem !important;
+}
+
 .accent-text {
   color: var(--cyan-accent);
 }
@@ -262,7 +298,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 .hero-desc {
-  font-size: 0.95rem;
+  font-size: 0.975rem;
   color: var(--text-slate);
   max-width: 620px;
   line-height: 1.6;
@@ -279,68 +315,121 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   50% { opacity: 0; }
 }
 
-/* CLEAN 3D PROFILE DEPTH MOVEMENT (Front & Back Tilt) */
-.profile-depth-container {
+/* Stats Counter Bar */
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.775rem;
+  color: var(--text-slate);
+}
+
+/* CONCENTRIC CYAN RINGS PROFILE FRAME */
+.profile-concentric-container {
   position: relative;
-  width: 270px;
-  height: 270px;
+  width: 330px;
+  height: 330px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  perspective: 1000px;
 }
 
-.profile-ambient-glow {
+.concentric-ring {
   position: absolute;
-  width: 250px;
-  height: 250px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 242, 254, 0.35) 0%, rgba(127, 0, 255, 0.2) 60%, transparent 80%);
-  filter: blur(28px);
-  z-index: 1;
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  pointer-events: none;
+  animation: ring-pulse 6s ease-in-out infinite alternate;
 }
 
-.avatar-depth-card {
+.ring-1 { width: 320px; height: 320px; border-color: rgba(0, 242, 254, 0.15); }
+.ring-2 { width: 290px; height: 290px; border-color: rgba(56, 189, 248, 0.25); animation-delay: 1.5s; }
+.ring-3 { width: 260px; height: 260px; border-color: rgba(0, 242, 254, 0.35); animation-delay: 3s; }
+
+@keyframes ring-pulse {
+  0% { transform: scale(0.98); opacity: 0.6; }
+  100% { transform: scale(1.03); opacity: 1; }
+}
+
+/* Ultra-Smooth Liquid Float Profile Avatar Animation */
+.profile-avatar-circle {
+  width: 235px;
+  height: 235px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3.5px solid var(--cyan-accent);
+  box-shadow: 0 0 35px rgba(0, 242, 254, 0.4);
   position: relative;
   z-index: 2;
-  transform-style: preserve-3d;
-  animation: avatar-3d-depth 6s ease-in-out infinite alternate;
+  animation: avatar-liquid-float 5s ease-in-out infinite alternate;
 }
 
-@keyframes avatar-3d-depth {
+@keyframes avatar-liquid-float {
   0% {
-    transform: translateY(0px) rotateY(-5deg) rotateX(5deg) scale(1);
-    box-shadow: 0 10px 25px rgba(0, 242, 254, 0.25);
+    transform: translateY(0px) scale(1);
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.35);
   }
   50% {
-    transform: translateY(-10px) rotateY(5deg) rotateX(-3deg) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 242, 254, 0.45);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 45px rgba(0, 242, 254, 0.55), 0 0 15px rgba(56, 189, 248, 0.4);
   }
   100% {
-    transform: translateY(0px) rotateY(-5deg) rotateX(5deg) scale(1);
-    box-shadow: 0 10px 25px rgba(0, 242, 254, 0.25);
+    transform: translateY(0px) scale(1);
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.35);
   }
 }
 
-.avatar-img-depth {
-  width: 240px;
-  height: 240px;
+.profile-img-fluid {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 4px solid var(--cyan-accent);
-  transition: var(--transition);
 }
 
-.avatar-img-depth:hover {
-  transform: scale(1.02);
-  border-color: #ffffff;
+/* Floating Info Pills */
+.floating-pill-card {
+  position: absolute;
+  z-index: 3;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-cyan-subtle);
+  padding: 8px 14px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation: pill-float 4s ease-in-out infinite alternate;
+}
+
+@keyframes pill-float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
+}
+
+.pill-top-left {
+  top: 5%;
+  left: -8%;
+}
+
+.pill-bottom-right {
+  bottom: 5%;
+  right: -8%;
+  animation-delay: 2s;
+}
+
+.pill-icon {
+  font-size: 1.2rem;
 }
 
 /* ------------------------------------------------------------------------
-   STEP 6: PROFESSIONAL CONTINUOUS ANIMATED TECH LOGO MARQUEE STRIP
+   STEP 6: SEAMLESS AUTO-SCROLLING TECH TICKER
    ------------------------------------------------------------------------
 */
-.tech-marquee-wrapper {
+.tech-ticker-container {
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(10px);
   overflow: hidden;
@@ -348,35 +437,35 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   z-index: 5;
 }
 
-.marquee-track {
+.ticker-track {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.marquee-content {
+.ticker-content {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 28s linear infinite;
+  animation: ticker-slide 30s linear infinite;
 }
 
-.marquee-content:hover {
+.ticker-content:hover {
   animation-play-state: paused;
 }
 
-@keyframes marquee-scroll {
+@keyframes ticker-slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-.marquee-item {
+.ticker-item {
   display: flex;
   align-items: center;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-light);
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-slate);
+  border: 1px solid var(--border-cyan-subtle);
   padding: 6px 16px;
   border-radius: 20px;
   margin-right: 1.25rem;
@@ -384,31 +473,39 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   flex-shrink: 0;
 }
 
-.marquee-item:hover {
+.ticker-item:hover {
   background: rgba(0, 242, 254, 0.15);
   border-color: var(--cyan-accent);
   color: var(--cyan-accent);
 }
 
 /* ------------------------------------------------------------------------
-   STEP 7: CONTENT CARDS & SECTION HEADERS
+   STEP 7: PROMINENT MAIN SECTION HEADINGS (2.15rem) & BALANCED CARD HEADINGS
    ------------------------------------------------------------------------
 */
+/* Prominent Main Section Headings */
 .section-title {
-  font-size: 1.65rem;
-  font-weight: 700;
+  font-size: 2.15rem !important; /* Prominent, larger main section titles */
+  font-weight: 800;
   color: var(--text-white);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.section-subtitle {
-  font-size: 0.875rem;
+.about-tagline {
+  letter-spacing: 0.3px;
+}
+
+.about-text-lg {
+  font-size: 1rem;
+  line-height: 1.65;
   color: var(--text-slate);
 }
 
 .content-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-slate);
+  border: 1px solid var(--border-cyan-subtle);
   border-radius: 14px;
   transition: var(--transition);
   position: relative;
@@ -417,15 +514,16 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 
 .content-card:hover {
   background: var(--bg-card-hover);
-  border-color: var(--border-slate);
+  border-color: var(--cyan-accent);
   transform: translateY(-3px);
 }
 
 .border-cyan-glow-card {
   border: 1px solid var(--cyan-accent) !important;
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.18);
 }
 
+/* Inner Card Headings (Balanced 1.15rem so main section titles dominate) */
 .card-heading {
   font-size: 1.15rem;
   font-weight: 700;
@@ -433,25 +531,22 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 .card-heading-sm {
-  font-size: 1rem;
+  font-size: 0.975rem;
   font-weight: 600;
   color: var(--text-white);
 }
 
 .card-text {
   color: var(--text-slate);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
-/* ------------------------------------------------------------------------
-   STEP 8: TECHNICAL SKILLS GLASS CARDS (Seamless Flow)
-   ------------------------------------------------------------------------
-*/
+/* Technical Skills Glass Cards */
 .skill-glass-card {
   background: rgba(21, 30, 50, 0.85) !important;
   backdrop-filter: blur(12px);
-  border: 1px solid var(--border-slate);
+  border: 1px solid var(--border-cyan-subtle);
   border-radius: 14px;
   transition: var(--transition);
 }
@@ -464,8 +559,8 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 .skill-icon-badge {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -475,7 +570,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 
 .skill-chip {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-slate);
+  border: 1px solid var(--border-cyan-subtle);
   color: var(--text-slate);
   font-size: 0.775rem;
   padding: 4px 9px;
@@ -486,15 +581,27 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 .skill-chip:hover {
-  background: rgba(0, 242, 254, 0.12);
+  background: rgba(0, 242, 254, 0.15);
   border-color: var(--cyan-accent);
   color: var(--cyan-accent);
 }
 
-/* ------------------------------------------------------------------------
-   STEP 9: PROJECT BULLETS & CERTIFICATIONS
-   ------------------------------------------------------------------------
-*/
+/* Tech Stack Cards */
+.tech-stack-card {
+  background: rgba(21, 30, 50, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-cyan-subtle);
+  border-radius: 16px;
+  transition: var(--transition);
+}
+
+.tech-stack-card:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: var(--cyan-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 242, 254, 0.2);
+}
+
 .project-list {
   padding-left: 1.2rem;
   font-size: 0.875rem;
@@ -502,7 +609,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 .project-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
   line-height: 1.5;
 }
 
@@ -516,9 +623,38 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 /* ------------------------------------------------------------------------
-   STEP 10: CONTACT FORM & FOOTER
+   STEP 8: ULTRA-SMOOTH 3D GPU-ACCELERATED SCROLL REVEAL ANIMATIONS
    ------------------------------------------------------------------------
 */
+.reveal-fade-up, .reveal-slide-left, .reveal-slide-right, .reveal-scale-up {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-fade-up { transform: translate3d(0, 35px, 0); }
+.reveal-slide-left { transform: translate3d(-50px, 0, 0); }
+.reveal-slide-right { transform: translate3d(50px, 0, 0); }
+.reveal-scale-up { transform: scale3d(0.93, 0.93, 1); }
+
+.reveal-fade-up.active, .reveal-slide-left.active, .reveal-slide-right.active, .reveal-scale-up.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 9: CONTACT FORM & FOOTER
+   ------------------------------------------------------------------------
+*/
+.contact-section-wrapper {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--border-cyan-subtle);
+  border-bottom: 1px solid var(--border-cyan-subtle);
+  position: relative;
+  z-index: 3;
+}
+
 .info-label {
   display: block;
   font-size: 0.725rem;
@@ -546,7 +682,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 
 .form-control-custom {
   background: #0f172a !important;
-  border: 1px solid var(--border-slate) !important;
+  border: 1px solid var(--border-cyan-subtle) !important;
   color: var(--text-white) !important;
   font-size: 0.875rem;
   border-radius: 8px;
@@ -554,11 +690,26 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 
 .form-control-custom:focus {
   border-color: var(--cyan-accent) !important;
-  box-shadow: 0 0 8px rgba(0, 242, 254, 0.25) !important;
+  box-shadow: 0 0 8px var(--cyan-glow) !important;
 }
 
 .form-control-custom::placeholder {
   color: #64748b;
+}
+
+.bg-dark-pill {
+  background: rgba(15, 23, 42, 0.75) !important;
+  transition: all 0.25s ease-in-out;
+}
+
+.focus-item {
+  transition: all 0.25s ease-in-out;
+}
+
+.focus-item:hover {
+  background: rgba(0, 242, 254, 0.08) !important;
+  border-color: var(--cyan-accent) !important;
+  transform: translateX(4px);
 }
 
 .footer {
@@ -567,21 +718,14 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   z-index: 2;
 }
 
-/* Responsive Adjustments */
+/* Responsive Tweaks */
 @media (max-width: 767.98px) {
-  .hero-title {
-    font-size: 1.75rem;
-  }
-  .profile-depth-container {
-    width: 220px;
-    height: 220px;
-  }
-  .avatar-img-depth {
-    width: 200px;
-    height: 200px;
-  }
-  .marquee-item {
-    font-size: 0.8rem;
-    padding: 4px 12px;
-  }
+  .section-title { font-size: 1.65rem !important; }
+  .hero-title-lg { font-size: 1.85rem !important; }
+  .profile-concentric-container { width: 260px; height: 260px; }
+  .profile-avatar-circle { width: 185px; height: 185px; }
+  .ring-1 { width: 250px; height: 250px; }
+  .ring-2 { width: 230px; height: 230px; }
+  .ring-3 { width: 210px; height: 210px; }
+  .floating-pill-card { padding: 4px 10px; font-size: 0.75rem; }
 }
