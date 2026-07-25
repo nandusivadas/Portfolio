@@ -1,0 +1,571 @@
+/* 
+  ========================================================================
+  STYLE.CSS - NANDU SIVADAS CLOUD & DEVOPS PORTFOLIO
+  ========================================================================
+  Author: Nandu Sivadas
+  Description: Custom CSS Design System featuring Dark Mode, Glassmorphic
+               cards, glowing gradients, smooth scroll, and responsive layouts.
+  ========================================================================
+*/
+
+/* ------------------------------------------------------------------------
+   STEP 1: CSS DESIGN TOKENS & ROOT VARIABLES
+   ------------------------------------------------------------------------
+   Centralized variables for colors, fonts, shadows, and transitions.
+*/
+:root {
+  /* Color Palette */
+  --bg-dark: #0b0f19;
+  --bg-darker: #070a12;
+  --bg-darkest: #04060a;
+  --bg-card: rgba(17, 25, 40, 0.75);
+  --bg-card-hover: rgba(23, 33, 53, 0.85);
+
+  /* Primary Accent Colors (DevOps Cyan & Electric Blue) */
+  --cyan-primary: #00f2fe;
+  --blue-secondary: #4facfe;
+  --purple-glow: #7f00ff;
+
+  /* Text Colors */
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-light-50: rgba(243, 244, 246, 0.7);
+
+  /* Border & Glass Effects */
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --border-cyan-glow: rgba(0, 242, 254, 0.3);
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Transitions & Shadows */
+  --transition-fast: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-glow: 0 10px 30px -10px rgba(0, 242, 254, 0.3);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 2: GLOBAL RESET & BODY STYLES
+   ------------------------------------------------------------------------
+*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for fixed top navbar */
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .section-title {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-primary);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 3: UTILITY & GRADIENT CLASSES
+   ------------------------------------------------------------------------
+*/
+.text-gradient {
+  background: linear-gradient(135deg, var(--cyan-primary) 0%, var(--blue-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-cyan {
+  color: var(--cyan-primary) !important;
+}
+
+.bg-darker {
+  background-color: var(--bg-darker) !important;
+}
+
+.bg-darkest {
+  background-color: var(--bg-darkest) !important;
+}
+
+.bg-dark-glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bg-dark-pill {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.bg-cyan-subtle {
+  background: rgba(0, 242, 254, 0.1) !important;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cyan-primary), var(--blue-secondary));
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.hover-cyan:hover {
+  color: var(--cyan-primary) !important;
+}
+
+.extra-small {
+  font-size: 0.75rem;
+}
+
+.tracking-wider {
+  letter-spacing: 1px;
+}
+
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+/* ------------------------------------------------------------------------
+   STEP 4: BUTTON STYLES
+   ------------------------------------------------------------------------
+*/
+.btn-gradient {
+  background: linear-gradient(135deg, var(--cyan-primary) 0%, var(--blue-secondary) 100%);
+  color: #04060a !important;
+  font-weight: 600;
+  border: none;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25);
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 242, 254, 0.4);
+  color: #04060a !important;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-glass);
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.btn-outline-custom:hover {
+  background: rgba(0, 242, 254, 0.1);
+  border-color: var(--cyan-primary);
+  color: var(--cyan-primary);
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 5: NAVBAR STYLING (Glassmorphism)
+   ------------------------------------------------------------------------
+*/
+.navbar-custom {
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-glass);
+  transition: var(--transition-fast);
+}
+
+.navbar-custom .nav-link {
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: var(--transition-fast);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: var(--cyan-primary) !important;
+}
+
+/* ------------------------------------------------------------------------
+   STEP 6: HERO SECTION & ANIMATED BLOBS
+   ------------------------------------------------------------------------
+*/
+.hero-section {
+  background: radial-gradient(circle at 50% 20%, #131d33 0%, var(--bg-dark) 70%);
+}
+
+/* Glowing background ambient circles */
+.blob-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blob-cyan {
+  top: 10%;
+  left: -5%;
+  background: var(--cyan-primary);
+}
+
+.blob-purple {
+  bottom: 10%;
+  right: -5%;
+  background: var(--purple-glow);
+}
+
+/* Status Indicator Dot */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--cyan-primary);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px var(--cyan-primary);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Typing Cursor Animation */
+.typing-cursor {
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Tech Badges Strip */
+.tech-badge {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid var(--border-glass);
+  transition: var(--transition-fast);
+}
+
+.tech-badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--cyan-primary);
+  background: rgba(0, 242, 254, 0.08);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 7: PROFILE AVATAR & FLOATING BADGES
+   ------------------------------------------------------------------------
+*/
+.profile-avatar-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+.avatar-glowing-ring {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan-primary), var(--purple-glow));
+  z-index: 1;
+  filter: blur(15px);
+  opacity: 0.6;
+  animation: spin-glow 10s linear infinite;
+}
+
+@keyframes spin-glow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.profile-avatar-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 4px solid var(--bg-dark);
+}
+
+/* Floating overlay badge cards */
+.floating-badge {
+  position: absolute;
+  z-index: 3;
+  background: rgba(11, 15, 25, 0.9);
+  border: 1px solid var(--border-cyan-glow);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: float-badge 4s ease-in-out infinite;
+}
+
+.badge-aws {
+  top: 10px;
+  left: -40px;
+}
+
+.badge-ansible {
+  bottom: 10px;
+  right: -40px;
+  animation-delay: 2s;
+}
+
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ------------------------------------------------------------------------
+   STEP 8: GLASSMORPHIC CARDS (Reusable Component)
+   ------------------------------------------------------------------------
+*/
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-cyan-glow);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 9: SKILLS & TECH TAGS
+   ------------------------------------------------------------------------
+*/
+.skill-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.tech-tag:hover {
+  background: rgba(0, 242, 254, 0.1);
+  border-color: var(--cyan-primary);
+  color: var(--cyan-primary);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 10: PROJECT CARDS
+   ------------------------------------------------------------------------
+*/
+.project-bullets li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.project-icon-wrapper {
+  transition: var(--transition-fast);
+}
+
+.project-card:hover .project-icon-wrapper {
+  border-color: var(--cyan-primary) !important;
+  transform: scale(1.03);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 11: TIMELINE (Experience & Education)
+   ------------------------------------------------------------------------
+*/
+.timeline-container {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--cyan-primary) 0%, var(--purple-glow) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -30px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+  z-index: 2;
+}
+
+.timeline-content {
+  margin-left: 15px;
+}
+
+/* ------------------------------------------------------------------------
+   STEP 12: CERTIFICATIONS & CONTACT FORM
+   ------------------------------------------------------------------------
+*/
+.cert-icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-square, .icon-circle {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-square {
+  width: 44px;
+  height: 44px;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background: var(--cyan-primary);
+  color: #04060a;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+.custom-input {
+  background: rgba(11, 15, 25, 0.6) !important;
+  border: 1px solid var(--border-glass) !important;
+  color: var(--text-main) !important;
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: var(--transition-fast);
+}
+
+.custom-input:focus {
+  border-color: var(--cyan-primary) !important;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2) !important;
+}
+
+.custom-input::placeholder {
+  color: #6b7280;
+}
+
+/* ------------------------------------------------------------------------
+   STEP 13: SCROLL REVEAL ANIMATION CLASSES
+   ------------------------------------------------------------------------
+*/
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------------------
+   STEP 14: RESPONSIVE MEDIA QUERIES
+   ------------------------------------------------------------------------
+*/
+@media (max-width: 991.98px) {
+  .badge-aws {
+    top: 0;
+    left: -10px;
+  }
+  .badge-ansible {
+    bottom: 0;
+    right: -10px;
+  }
+  .profile-avatar-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .floating-badge {
+    display: none; /* Hide floating overlays on small mobile screens to prevent clutter */
+  }
+  .display-3 {
+    font-size: 2.5rem;
+  }
+}

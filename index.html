@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    ========================================================================
+    PORTFOLIO WEBSITE - NANDU SIVADAS (Aspiring Cloud & DevOps Engineer)
+    ========================================================================
+    Author: Nandu Sivadas
+    Description: Static Portfolio Website built with HTML5, Bootstrap 5, CSS3, and JavaScript.
+    Design: Dark Mode Glassmorphism Theme tailored for Cloud & DevOps Engineers.
+    ========================================================================
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandu Sivadas | Cloud & DevOps Engineer Portfolio</title>
+
+  <!-- SEO Meta Tags for Search Engine Optimization -->
+  <meta name="description" content="Professional portfolio of Nandu Sivadas, an Aspiring Cloud & DevOps Engineer skilled in AWS, Ansible, Linux, Docker, Jenkins, Terraform, Python, and Bash.">
+  <meta name="keywords" content="Nandu Sivadas, DevOps Engineer, Cloud Engineer, AWS, Ansible, Linux, Docker, Terraform, CI/CD, Kerala, India, Portfolio">
+  <meta name="author" content="Nandu Sivadas">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:title" content="Nandu Sivadas | Cloud & DevOps Engineer Portfolio">
+  <meta property="og:description" content="Explore my projects in AWS Infrastructure Automation, Ansible Playbooks, and Linux Server Administration.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: 'Inter' for body readability and 'Outfit' for modern tech headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS CDN (v5.3.3) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons CDN (v1.11.3) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Devicon CDN for authentic programming & devops technology logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- FontAwesome CDN for additional cloud/server infrastructure icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
+
+  <!-- ========================================================================
+       STEP 1: NAVIGATION BAR (Glassmorphic & Responsive Navbar)
+       ======================================================================== -->
+  <!-- 
+    The navbar uses Bootstrap 5 sticky-top to remain pinned at the top while scrolling.
+    Custom class 'navbar-custom' applies a dark translucent backdrop blur (glassmorphism effect).
+  -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <div class="container">
+      
+      <!-- Brand Logo / Name with Gradient Styling -->
+      <a class="navbar-brand fw-bold text-gradient d-flex align-items-center gap-2" href="#hero">
+        <i class="bi bi-cloud-terminal-fill text-cyan fs-4"></i>
+        <span>NANDU SIVADAS</span>
+      </a>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Links Menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#certifications">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          
+          <!-- Download Resume Button CTA -->
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <a href="./Nandu_Sivadas_Resume.pdf" download="Nandu_Sivadas_Resume.pdf" class="btn btn-gradient btn-sm px-3 py-2 d-inline-flex align-items-center gap-2 shadow-sm">
+              <i class="bi bi-download"></i> Resume PDF
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       STEP 2: HERO SECTION (Landing Section with Animated Text & Profile)
+       ======================================================================== -->
+  <!-- 
+    The hero section introduces Nandu Sivadas.
+    Features:
+    - Glowing animated backdrop blobs (cyan & purple).
+    - Dynamic JavaScript typing effect cycling through key roles.
+    - Cloud & DevOps technology badges strip.
+    - Responsive grid: Left text details, Right glowing profile avatar.
+  -->
+  <section id="hero" class="hero-section position-relative overflow-hidden py-5">
+    
+    <!-- Background Design Elements: Glowing Radial Blobs -->
+    <div class="blob-glow blob-cyan"></div>
+    <div class="blob-glow blob-purple"></div>
+
+    <div class="container position-relative z-1 py-4">
+      <div class="row align-items-center min-vh-80 g-5">
+        
+        <!-- Hero Left Column: Intro & Call-To-Action -->
+        <div class="col-lg-7 order-2 order-lg-1 text-center text-lg-start">
+          
+          <!-- Status Badge -->
+          <div class="badge rounded-pill bg-dark-glass text-cyan border border-cyan-subtle px-3 py-2 mb-3 shadow-sm d-inline-flex align-items-center gap-2">
+            <span class="status-dot"></span>
+            <span>Aspiring Cloud & DevOps Engineer</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="display-3 fw-extrabold text-light mb-3">
+            Hi, I'm <span class="text-gradient">Nandu Sivadas</span>
+          </h1>
+
+          <!-- Animated Typing Text Subtitle -->
+          <h2 class="h3 mb-4 text-light-50 fw-normal">
+            Specializing in <span id="typing-text" class="text-cyan fw-semibold"></span><span class="typing-cursor text-cyan">|</span>
+          </h2>
+
+          <!-- Short Professional Summary -->
+          <p class="lead text-muted mb-4 pe-lg-4 fs-6">
+            Fresher with hands-on Cloud & DevOps exposure. Skilled in configuring core AWS services, automating Linux server deployments using Ansible playbooks, and building scalable infrastructure.
+          </p>
+
+          <!-- Cloud & DevOps Technology Icons Strip -->
+          <div class="tech-stack-strip mb-4 p-3 rounded-4 bg-dark-glass border border-secondary-subtle">
+            <span class="text-muted small d-block mb-2 text-uppercase tracking-wider fw-semibold">Primary DevOps Stack:</span>
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3">
+              <div class="tech-badge" title="Amazon Web Services"><i class="devicon-amazonwebservices-plain-wordmark colored fs-3"></i></div>
+              <div class="tech-badge" title="Ansible"><i class="devicon-ansible-plain colored fs-3"></i></div>
+              <div class="tech-badge" title="Docker"><i class="devicon-docker-plain colored fs-3"></i></div>
+              <div class="tech-badge" title="Jenkins"><i class="devicon-jenkins-line colored fs-3"></i></div>
+              <div class="tech-badge" title="Terraform"><i class="devicon-terraform-plain colored fs-3"></i></div>
+              <div class="tech-badge" title="Linux Red Hat"><i class="devicon-redhat-plain colored fs-3"></i></div>
+              <div class="tech-badge" title="Python"><i class="devicon-python-plain colored fs-3"></i></div>
+              <div class="tech-badge" title="Bash"><i class="devicon-bash-plain colored fs-3"></i></div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3">
+            <a href="#projects" class="btn btn-gradient btn-lg px-4 py-2 d-inline-flex align-items-center gap-2">
+              View Projects <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline-custom btn-lg px-4 py-2 d-inline-flex align-items-center gap-2">
+              Get In Touch <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column: Profile Image Frame -->
+        <div class="col-lg-5 order-1 order-lg-2 text-center">
+          <div class="profile-avatar-wrapper mx-auto">
+            <div class="avatar-glowing-ring"></div>
+            <img src="./profile.jpg" alt="Nandu Sivadas Profile Picture" class="img-fluid profile-avatar-img rounded-circle shadow-lg">
+            
+            <!-- Floating Badge Card 1 -->
+            <div class="floating-badge badge-aws shadow-lg">
+              <i class="fa-brands fa-aws fs-4 text-warning"></i>
+              <div>
+                <span class="d-block fw-bold small text-white">AWS Cloud</span>
+                <span class="d-block extra-small text-muted">EC2, VPC, S3</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge Card 2 -->
+            <div class="floating-badge badge-ansible shadow-lg">
+              <i class="bi bi-gear-wide-connected fs-4 text-cyan"></i>
+              <div>
+                <span class="d-block fw-bold small text-white">Ansible</span>
+                <span class="d-block extra-small text-muted">Automation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 3: ABOUT ME SECTION
+       ======================================================================== -->
+  <!-- 
+    Detailed introduction covering background, summary, location, quick info,
+    and target certifications.
+  -->
+  <section id="about" class="py-5 reveal">
+    <div class="container py-4">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-5">
+        <span class="badge bg-cyan-subtle text-cyan px-3 py-2 rounded-pill fw-semibold text-uppercase">Overview</span>
+        <h2 class="section-title text-light mt-2">About Me</h2>
+        <div class="title-underline mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Left: Bio & Professional Summary -->
+        <div class="col-lg-7">
+          <div class="glass-card p-4 p-md-5 h-100">
+            <h3 class="h4 text-gradient mb-3"><i class="bi bi-person-lines-fill me-2"></i> Professional Summary</h3>
+            
+            <p class="text-muted leading-relaxed mb-4">
+              Fresher with hands-on Cloud/DevOps exposure gained through a current internship and self-driven AWS and Ansible projects. Comfortable configuring core AWS services, automating Linux server deployments, and troubleshooting infrastructure issues.
+            </p>
+            <p class="text-muted leading-relaxed mb-4">
+              Actively pursuing <strong class="text-light">RHCSA</strong>, <strong class="text-light">RHCE</strong>, and <strong class="text-light">AWS Certified Solutions Architect - Associate</strong> certifications. Seeking an entry-level Cloud/DevOps role to apply and grow these skills in a production environment.
+            </p>
+
+            <!-- Key Competencies Pills -->
+            <h4 class="h6 text-cyan text-uppercase tracking-wider fw-bold mb-3">Core Focus Areas</h4>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-dark-pill border border-secondary text-light px-3 py-2"><i class="bi bi-cloud-check text-cyan me-1"></i> AWS Cloud Infrastructure</span>
+              <span class="badge bg-dark-pill border border-secondary text-light px-3 py-2"><i class="bi bi-terminal text-cyan me-1"></i> Linux Administration (RHEL/Ubuntu)</span>
+              <span class="badge bg-dark-pill border border-secondary text-light px-3 py-2"><i class="bi bi-robot text-cyan me-1"></i> Ansible Automation</span>
+              <span class="badge bg-dark-pill border border-secondary text-light px-3 py-2"><i class="bi bi-diagram-3 text-cyan me-1"></i> CI/CD & Docker Containerization</span>
+              <span class="badge bg-dark-pill border border-secondary text-light px-3 py-2"><i class="bi bi-shield-check text-cyan me-1"></i> Network Security & SSL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Personal Details & Contact Quick Info Card -->
+        <div class="col-lg-5">
+          <div class="glass-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h3 class="h4 text-gradient mb-4"><i class="bi bi-info-circle-fill me-2"></i> Quick Info</h3>
+              
+              <ul class="list-unstyled contact-info-list mb-4">
+                <li class="d-flex align-items-center gap-3 mb-3">
+                  <div class="icon-square bg-cyan-subtle text-cyan"><i class="bi bi-geo-alt-fill fs-5"></i></div>
+                  <div>
+                    <span class="d-block text-muted extra-small text-uppercase">Location</span>
+                    <span class="fw-semibold text-light">Kottayam, Kerala, India</span>
+                  </div>
+                </li>
+                
+                <li class="d-flex align-items-center gap-3 mb-3">
+                  <div class="icon-square bg-cyan-subtle text-cyan"><i class="bi bi-envelope-fill fs-5"></i></div>
+                  <div>
+                    <span class="d-block text-muted extra-small text-uppercase">Email</span>
+                    <a href="mailto:nandusivadas98@gmail.com" class="fw-semibold text-light text-decoration-none hover-cyan">nandusivadas98@gmail.com</a>
+                  </div>
+                </li>
+
+                <li class="d-flex align-items-center gap-3 mb-3">
+                  <div class="icon-square bg-cyan-subtle text-cyan"><i class="bi bi-telephone-fill fs-5"></i></div>
+                  <div>
+                    <span class="d-block text-muted extra-small text-uppercase">Phone</span>
+                    <a href="tel:+917012861796" class="fw-semibold text-light text-decoration-none hover-cyan">+91 7012861796</a>
+                  </div>
+                </li>
+
+                <li class="d-flex align-items-center gap-3">
+                  <div class="icon-square bg-cyan-subtle text-cyan"><i class="bi bi-mortarboard-fill fs-5"></i></div>
+                  <div>
+                    <span class="d-block text-muted extra-small text-uppercase">Education</span>
+                    <span class="fw-semibold text-light">B.Sc. Math with Computer Science</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Social Media & Profile Links -->
+            <div class="pt-3 border-top border-secondary-subtle d-flex gap-3">
+              <a href="https://github.com/nandusivadas" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom flex-grow-1 d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com/in/nandusivadas" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom flex-grow-1 d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-linkedin text-info"></i> LinkedIn
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 4: SKILLS & TECHNICAL COMPETENCIES SECTION
+       ======================================================================== -->
+  <!-- 
+    Displays Nandu's technical skills grouped logically into 6 categories:
+    1. Cloud Platforms (AWS)
+    2. DevOps & IaC Tools
+    3. Operating Systems & Linux Admin
+    4. Web Servers & Networking
+    5. Scripting & Programming
+    6. Databases
+  -->
+  <section id="skills" class="py-5 reveal bg-darker">
+    <div class="container py-4">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-5">
+        <span class="badge bg-cyan-subtle text-cyan px-3 py-2 rounded-pill fw-semibold text-uppercase">Technical Stack</span>
+        <h2 class="section-title text-light mt-2">Skills & Expertise</h2>
+        <div class="title-underline mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Skill Card 1: Cloud Platforms -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card skill-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-box bg-orange-subtle text-warning">
+                <i class="fa-brands fa-aws fs-3"></i>
+              </div>
+              <h3 class="h5 text-light mb-0">Cloud Platforms</h3>
+            </div>
+            <p class="text-muted small mb-3">Core AWS Cloud services configuration, IAM security, and auto-scaling architecture.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tech-tag"><i class="devicon-amazonwebservices-plain colored me-1"></i> EC2</span>
+              <span class="tech-tag">S3 Bucket</span>
+              <span class="tech-tag">RDS Database</span>
+              <span class="tech-tag">IAM Roles</span>
+              <span class="tech-tag">VPC Subnets</span>
+              <span class="tech-tag">AWS Lambda</span>
+              <span class="tech-tag">Route 53</span>
+              <span class="tech-tag">EventBridge</span>
+              <span class="tech-tag">Auto Scaling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Card 2: DevOps & IaC -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card skill-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-box bg-cyan-subtle text-cyan">
+                <i class="bi bi-diagram-3-fill fs-3"></i>
+              </div>
+              <h3 class="h5 text-light mb-0">DevOps & CI/CD</h3>
+            </div>
+            <p class="text-muted small mb-3">Configuration management, infrastructure automation, containerization, and version control.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tech-tag"><i class="devicon-ansible-plain colored me-1"></i> Ansible Playbooks</span>
+              <span class="tech-tag"><i class="devicon-docker-plain colored me-1"></i> Docker</span>
+              <span class="tech-tag"><i class="devicon-jenkins-line colored me-1"></i> Jenkins</span>
+              <span class="tech-tag"><i class="devicon-terraform-plain colored me-1"></i> Terraform</span>
+              <span class="tech-tag"><i class="devicon-git-plain colored me-1"></i> Git / GitHub</span>
+              <span class="tech-tag">CI/CD Pipelines</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Card 3: Operating Systems -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card skill-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-box bg-danger-subtle text-danger">
+                <i class="devicon-redhat-plain fs-3"></i>
+              </div>
+              <h3 class="h5 text-light mb-0">Operating Systems</h3>
+            </div>
+            <p class="text-muted small mb-3">System administration, kernel boot recovery, permissions, and server management.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tech-tag"><i class="devicon-redhat-plain colored me-1"></i> RHEL</span>
+              <span class="tech-tag"><i class="devicon-ubuntu-plain colored me-1"></i> Ubuntu Server</span>
+              <span class="tech-tag">Astra Linux</span>
+              <span class="tech-tag"><i class="devicon-windows8-original colored me-1"></i> Windows Server</span>
+              <span class="tech-tag">GRUB2 Boot Recovery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Card 4: Web Servers & Networking -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card skill-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-box bg-success-subtle text-success">
+                <i class="devicon-nginx-original fs-3"></i>
+              </div>
+              <h3 class="h5 text-light mb-0">Servers & Networking</h3>
+            </div>
+            <p class="text-muted small mb-3">Web server deployment, reverse proxy setup, SSL certificates, and firewall rules.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tech-tag"><i class="devicon-nginx-original colored me-1"></i> Nginx</span>
+              <span class="tech-tag"><i class="devicon-apache-plain colored me-1"></i> Apache HTTP</span>
+              <span class="tech-tag">DNS Configuration</span>
+              <span class="tech-tag">SSH Key Auth</span>
+              <span class="tech-tag">Firewalls & Security Groups</span>
+              <span class="tech-tag">SSL / TLS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Card 5: Scripting & Programming -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card skill-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-box bg-info-subtle text-info">
+                <i class="devicon-python-plain fs-3"></i>
+              </div>
+              <h3 class="h5 text-light mb-0">Scripting & Code</h3>
+            </div>
+            <p class="text-muted small mb-3">Automating repetitive administrative tasks and cloud scheduling scripts.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tech-tag"><i class="devicon-python-plain colored me-1"></i> Python</span>
+              <span class="tech-tag"><i class="devicon-bash-plain colored me-1"></i> Bash Scripting</span>
+              <span class="tech-tag">Shell Automation</span>
+              <span class="tech-tag">YAML Playbooks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Card 6: Databases -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card skill-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-box bg-primary-subtle text-primary">
+                <i class="devicon-mysql-plain fs-3"></i>
+              </div>
+              <h3 class="h5 text-light mb-0">Databases</h3>
+            </div>
+            <p class="text-muted small mb-3">Relational database configuration, user privileges, and cloud database instances.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tech-tag"><i class="devicon-mysql-plain colored me-1"></i> MySQL</span>
+              <span class="tech-tag">MariaDB</span>
+              <span class="tech-tag">AWS RDS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 5: PROJECTS SECTION
+       ======================================================================== -->
+  <!-- 
+    Showcases Nandu Sivadas's hands-on projects from his resume.
+    Each project card features:
+    - Title & Tech stack tags
+    - Detailed bullet points explaining the project work
+    - Interactive "View Tech Stack" badges & GitHub repository placeholder
+  -->
+  <section id="projects" class="py-5 reveal">
+    <div class="container py-4">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-5">
+        <span class="badge bg-cyan-subtle text-cyan px-3 py-2 rounded-pill fw-semibold text-uppercase">Hands-on Experience</span>
+        <h2 class="section-title text-light mt-2">Featured Projects</h2>
+        <div class="title-underline mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Project 1: Automated WordPress Infrastructure Deployment using Ansible -->
+        <div class="col-lg-12">
+          <div class="glass-card project-card p-4 p-md-5">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-8">
+                <div class="badge bg-primary-subtle text-primary mb-2">Ansible + AWS EC2</div>
+                <h3 class="h3 text-light fw-bold mb-3">Automated WordPress Infrastructure Deployment using Ansible</h3>
+                
+                <p class="text-muted small mb-3">
+                  <strong class="text-cyan">Tech Stack:</strong> AWS, EC2, Linux, Ansible, Nginx, PHP, MariaDB, WordPress, Git
+                </p>
+
+                <ul class="project-bullets text-muted mb-4">
+                  <li>Automated end-to-end deployment of a LEMP-based WordPress application on AWS EC2 using reusable Ansible Playbooks and Roles.</li>
+                  <li>Configured Nginx, PHP-FPM, MariaDB, SSL, and SFTP to deliver a secure, production-style web hosting environment.</li>
+                  <li>Replaced a multi-step manual server setup with a single automated playbook run, cutting repeat-deployment time from hours to minutes.</li>
+                </ul>
+
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-dark-pill border border-secondary">AWS EC2</span>
+                  <span class="badge bg-dark-pill border border-secondary">Ansible Playbooks</span>
+                  <span class="badge bg-dark-pill border border-secondary">Nginx & PHP-FPM</span>
+                  <span class="badge bg-dark-pill border border-secondary">MariaDB</span>
+                  <span class="badge bg-dark-pill border border-secondary">SSL Security</span>
+                </div>
+              </div>
+
+              <div class="col-lg-4 text-center">
+                <div class="project-icon-wrapper p-4 rounded-4 bg-dark-glass border border-secondary text-cyan">
+                  <i class="devicon-ansible-plain colored display-1 d-block mb-3"></i>
+                  <span class="d-block text-light fw-bold">Deployment Automation</span>
+                  <span class="d-block text-muted small mt-1">Single-run LEMP Setup</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AWS Infrastructure Automation using Ansible -->
+        <div class="col-lg-6">
+          <div class="glass-card project-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="badge bg-cyan-subtle text-cyan mb-2">Multi-Node AWS Cluster</div>
+              <h3 class="h4 text-light fw-bold mb-3">AWS Infrastructure Automation using Ansible</h3>
+              
+              <p class="text-muted small mb-3">
+                <strong class="text-cyan">Tech Stack:</strong> AWS EC2, Amazon Linux, Ansible, Docker, Git, Apache, SSH
+              </p>
+
+              <ul class="project-bullets text-muted mb-4">
+                <li>Built a 3-node AWS infrastructure (1 control node, 2 managed nodes) using SSH key-based authentication.</li>
+                <li>Automated Apache installation and configuration across all managed nodes using Ansible Playbooks and Roles.</li>
+                <li>Recreated the entire environment in a second AWS Region from version-controlled configuration, validating portability and repeatability.</li>
+              </ul>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary-subtle">
+              <span class="badge bg-dark-pill border border-secondary">3-Node Cluster</span>
+              <span class="badge bg-dark-pill border border-secondary">SSH Keys</span>
+              <span class="badge bg-dark-pill border border-secondary">Multi-Region AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Astra Linux System Recovery & Troubleshooting -->
+        <div class="col-lg-6">
+          <div class="glass-card project-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="badge bg-danger-subtle text-danger mb-2">Linux Kernel & Boot Troubleshooting</div>
+              <h3 class="h4 text-light fw-bold mb-3">Astra Linux System Recovery & Troubleshooting</h3>
+              
+              <p class="text-muted small mb-3">
+                <strong class="text-cyan">Tech Stack:</strong> Astra Linux, GRUB2, Linux Boot Process, VMware
+              </p>
+
+              <ul class="project-bullets text-muted mb-4">
+                <li>Diagnosed and recovered a non-bootable Astra Linux system caused by GRUB bootloader corruption.</li>
+                <li>Restored the Linux boot process using GRUB shell commands and initramfs emergency recovery techniques.</li>
+                <li>Rebuilt and validated the GRUB configuration to restore normal system startup with zero data loss.</li>
+              </ul>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary-subtle">
+              <span class="badge bg-dark-pill border border-secondary">GRUB2 Bootloader</span>
+              <span class="badge bg-dark-pill border border-secondary">initramfs Recovery</span>
+              <span class="badge bg-dark-pill border border-secondary">Zero Data Loss</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 6: EXPERIENCE & EDUCATION TIMELINE SECTION
+       ======================================================================== -->
+  <!-- 
+    Timeline view showing Nandu's practical experience as a Cloud & DevOps Intern,
+    his previous role as Studio Administrator, and his educational degree.
+  -->
+  <section id="experience" class="py-5 reveal bg-darker">
+    <div class="container py-4">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-5">
+        <span class="badge bg-cyan-subtle text-cyan px-3 py-2 rounded-pill fw-semibold text-uppercase">Career Journey</span>
+        <h2 class="section-title text-light mt-2">Experience & Education</h2>
+        <div class="title-underline mx-auto"></div>
+      </div>
+
+      <div class="timeline-container mx-auto" style="max-width: 900px;">
+        
+        <!-- Timeline Item 1: Cloud & DevOps Intern -->
+        <div class="timeline-item">
+          <div class="timeline-icon bg-cyan text-dark"><i class="bi bi-briefcase-fill"></i></div>
+          <div class="glass-card timeline-content p-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+              <h3 class="h5 text-light fw-bold mb-0">Cloud & DevOps Intern</h3>
+              <span class="badge bg-cyan-subtle text-cyan px-3 py-1 rounded-pill">Jan 2026 – Present</span>
+            </div>
+            <p class="text-cyan small mb-3"><i class="bi bi-building me-1"></i> Production Infrastructure & Internship Projects</p>
+            <ul class="text-muted small mb-0 ps-3">
+              <li class="mb-2">Configured AWS services including EC2, VPC, IAM, Route 53, ALB, Auto Scaling, and RDS as part of cloud infrastructure tasks.</li>
+              <li class="mb-2">Deployed secure LEMP web applications using Nginx, Security Groups, NAT Gateway, and Amazon SNS notifications.</li>
+              <li class="mb-2">Automated EC2 start/stop scheduling using AWS Lambda, Amazon EventBridge, and Bash scripts to minimize idle runtime costs.</li>
+              <li>Used Git and GitHub for version control while gaining practical exposure to Docker containerization and Jenkins CI/CD workflows.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Studio Administrator & Multimedia Designer -->
+        <div class="timeline-item">
+          <div class="timeline-icon bg-secondary text-light"><i class="bi bi-laptop"></i></div>
+          <div class="glass-card timeline-content p-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+              <h3 class="h5 text-light fw-bold mb-0">Studio Administrator & Multimedia Designer</h3>
+              <span class="badge bg-secondary-subtle text-light px-3 py-1 rounded-pill">2020 – 2025</span>
+            </div>
+            <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i> Operational Management</p>
+            <p class="text-muted small mb-0">
+              Managed daily studio operations, digital media assets, and cross-team workflow, consistently delivering complex client projects on schedule.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: Education -->
+        <div class="timeline-item">
+          <div class="timeline-icon bg-info text-dark"><i class="bi bi-mortarboard-fill"></i></div>
+          <div class="glass-card timeline-content p-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+              <h3 class="h5 text-light fw-bold mb-0">Bachelor of Science, Mathematics with Computer Science</h3>
+              <span class="badge bg-info-subtle text-info px-3 py-1 rounded-pill">Graduated</span>
+            </div>
+            <p class="text-info small mb-1"><i class="bi bi-bank me-1"></i> MG University, Kerala</p>
+            <p class="text-muted small mb-0">CGPA: 6.0 / 10 | Strong foundation in logical reasoning, discrete mathematics, and computer science concepts.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 7: CERTIFICATIONS & GOALS SECTION
+       ======================================================================== -->
+  <!-- 
+    Highlighting ongoing professional certifications (RHCSA, RHCE, AWS SA Associate).
+  -->
+  <section id="certifications" class="py-5 reveal">
+    <div class="container py-4">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-5">
+        <span class="badge bg-cyan-subtle text-cyan px-3 py-2 rounded-pill fw-semibold text-uppercase">Credentials</span>
+        <h2 class="section-title text-light mt-2">Certifications & Roadmap</h2>
+        <div class="title-underline mx-auto"></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Cert 1: RHCSA & RHCE -->
+        <div class="col-md-6 col-lg-5">
+          <div class="glass-card p-4 text-center h-100">
+            <div class="cert-icon-circle mx-auto mb-3 bg-danger-subtle text-danger">
+              <i class="devicon-redhat-plain fs-2"></i>
+            </div>
+            <h3 class="h5 text-light fw-bold mb-2">RHCSA & RHCE</h3>
+            <p class="text-muted small mb-3">Red Hat Certified System Administrator & Red Hat Certified Engineer</p>
+            <span class="badge bg-warning-subtle text-warning px-3 py-2 rounded-pill fw-semibold">
+              <i class="bi bi-hourglass-split me-1"></i> In Progress (Target: July 2026)
+            </span>
+          </div>
+        </div>
+
+        <!-- Cert 2: AWS Certified Solutions Architect -->
+        <div class="col-md-6 col-lg-5">
+          <div class="glass-card p-4 text-center h-100">
+            <div class="cert-icon-circle mx-auto mb-3 bg-warning-subtle text-warning">
+              <i class="fa-brands fa-aws fs-2"></i>
+            </div>
+            <h3 class="h5 text-light fw-bold mb-2">AWS Solutions Architect – Associate</h3>
+            <p class="text-muted small mb-3">Amazon Web Services Certified Solutions Architect</p>
+            <span class="badge bg-warning-subtle text-warning px-3 py-2 rounded-pill fw-semibold">
+              <i class="bi bi-hourglass-split me-1"></i> In Progress
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 8: CONTACT & FOOTER SECTION
+       ======================================================================== -->
+  <!-- 
+    Interactive static contact form with form validation script, along with direct
+    contact channels (email, phone, location, LinkedIn, GitHub).
+  -->
+  <section id="contact" class="py-5 reveal bg-darker">
+    <div class="container py-4">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-5">
+        <span class="badge bg-cyan-subtle text-cyan px-3 py-2 rounded-pill fw-semibold text-uppercase">Connect</span>
+        <h2 class="section-title text-light mt-2">Get In Touch</h2>
+        <div class="title-underline mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Contact Information Cards -->
+        <div class="col-lg-5">
+          <div class="glass-card p-4 p-md-5 h-100">
+            <h3 class="h4 text-gradient mb-3">Let's Connect</h3>
+            <p class="text-muted mb-4">
+              I am actively looking for an entry-level Cloud & DevOps Engineer position. Feel free to reach out for career opportunities, collaborations, or inquiries!
+            </p>
+
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="icon-circle bg-cyan-subtle text-cyan fs-4"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <span class="d-block text-muted extra-small text-uppercase">Location</span>
+                <span class="text-light fw-semibold">Kottayam, Kerala, India</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="icon-circle bg-cyan-subtle text-cyan fs-4"><i class="bi bi-envelope"></i></div>
+              <div>
+                <span class="d-block text-muted extra-small text-uppercase">Email</span>
+                <a href="mailto:nandusivadas98@gmail.com" class="text-light fw-semibold text-decoration-none hover-cyan">nandusivadas98@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="icon-circle bg-cyan-subtle text-cyan fs-4"><i class="bi bi-phone"></i></div>
+              <div>
+                <span class="d-block text-muted extra-small text-uppercase">Phone</span>
+                <a href="tel:+917012861796" class="text-light fw-semibold text-decoration-none hover-cyan">+91 7012861796</a>
+              </div>
+            </div>
+
+            <div class="pt-3 border-top border-secondary-subtle">
+              <span class="d-block text-muted extra-small text-uppercase mb-2">Social Profiles</span>
+              <div class="d-flex gap-3">
+                <a href="https://github.com/nandusivadas" target="_blank" class="social-btn" title="GitHub Profile"><i class="bi bi-github"></i></a>
+                <a href="https://linkedin.com/in/nandusivadas" target="_blank" class="social-btn" title="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:nandusivadas98@gmail.com" class="social-btn" title="Send Email"><i class="bi bi-envelope-fill"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="col-lg-7">
+          <div class="glass-card p-4 p-md-5">
+            <h3 class="h4 text-light mb-4">Send a Message</h3>
+            
+            <!-- Success Alert Notification (Hidden by Default) -->
+            <div id="formAlert" class="alert alert-success d-none border-0 shadow-sm mb-4" role="alert">
+              <i class="bi bi-check-circle-fill me-2"></i> Thank you! Your message has been sent successfully. I will get back to you soon.
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label text-muted small">Your Name</label>
+                  <input type="text" class="form-control custom-input" id="contactName" placeholder="John Doe" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label text-muted small">Your Email</label>
+                  <input type="email" class="form-control custom-input" id="contactEmail" placeholder="name@example.com" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="contactSubject" class="form-label text-muted small">Subject</label>
+                  <input type="text" class="form-control custom-input" id="contactSubject" placeholder="Job Opportunity / Project Inquiry" required>
+                  <div class="invalid-feedback">Please enter a subject.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label text-muted small">Message</label>
+                  <textarea class="form-control custom-input" id="contactMessage" rows="4" placeholder="Hello Nandu, I would like to discuss..." required></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+
+                <div class="col-12 pt-2">
+                  <button type="submit" class="btn btn-gradient btn-lg w-100 py-3 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-send-fill"></i> Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 9: FOOTER
+       ======================================================================== -->
+  <footer class="footer py-4 bg-darkest text-center text-muted border-top border-secondary-subtle">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      
+      <div>
+        <span class="text-light fw-bold">NANDU SIVADAS</span> &copy; 2026 | Cloud & DevOps Portfolio
+      </div>
+
+      <div class="small">
+        Built with HTML5, Bootstrap 5, CSS3 & JavaScript
+      </div>
+
+      <!-- Back to top button -->
+      <a href="#hero" class="btn btn-sm btn-outline-custom rounded-circle p-2" title="Back to top">
+        <i class="bi bi-arrow-up"></i>
+      </a>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       STEP 10: SCRIPTS & LIBRARIES
+       ======================================================================== -->
+  <!-- Bootstrap 5 JS Bundle CDN (Includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
