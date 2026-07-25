@@ -161,11 +161,11 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   background: linear-gradient(135deg, var(--cyan-accent), var(--blue-accent));
   color: #020617 !important;
   font-weight: 700;
-  font-size: 0.775rem;
-  padding: 0.3rem 0.85rem !important;
+  font-size: 0.825rem;
+  padding: 0.38rem 1rem !important;
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px var(--cyan-glow);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px var(--cyan-glow);
   transition: var(--transition);
 }
 
@@ -213,26 +213,26 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   background: rgba(11, 17, 32, 0.95);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-cyan-subtle);
-  padding: 0.35rem 0;
+  padding: 0.5rem 0;
   z-index: 1050;
 }
 
 .brand-icon {
   color: var(--cyan-accent);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .brand-text {
   color: var(--text-white);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   letter-spacing: 0.5px;
 }
 
 .custom-navbar .nav-link {
   color: var(--text-slate) !important;
-  font-size: 0.815rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  padding: 0.25rem 0.45rem !important;
+  padding: 0.35rem 0.6rem !important;
   white-space: nowrap;
   transition: var(--transition);
 }
