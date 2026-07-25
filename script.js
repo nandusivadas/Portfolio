@@ -1,36 +1,34 @@
 /* 
   ========================================================================
-  SCRIPT.JS (OPTION 2) - NANDU SIVADAS CLOUD & DEVOPS PORTFOLIO
+  SCRIPT.JS - NANDU SIVADAS CLOUD & DEVOPS PORTFOLIO
   ========================================================================
-  Author: Nandu Sivadas
-  Description: Custom JavaScript logic for typing animation, form validation,
-               and smooth navigation.
+  Features:
+  - Typing Animation Carousel (Focus Line: Cloud Infrastructure | Linux | DevOps Automation)
+  - Ambient Cloud Network Node Canvas Background Animation
+  - Form validation & interactive alerts
+  - Step-by-step educational comments throughout JavaScript code
   ========================================================================
 */
 
 document.addEventListener('DOMContentLoaded', function () {
 
   // ========================================================================
-  // STEP 1: TYPING CAROUSEL ANIMATION
+  // STEP 1: TYPING ANIMATION CAROUSEL
   // ========================================================================
-  /*
-    Types out technical specializations character by character in the Hero section.
-  */
   const typingElement = document.getElementById('typing-text');
   
   const roles = [
-    "AWS Cloud Infrastructure",
-    "Ansible Automation",
-    "Linux Administration (RHEL)",
-    "CI/CD & Docker Containers"
+    "Cloud Infrastructure",
+    "Linux Administration",
+    "DevOps Automation"
   ];
 
   let roleIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  const typingSpeed = 90;
-  const eraseSpeed = 45;
-  const pauseTime = 1600;
+  const typingSpeed = 100;
+  const eraseSpeed = 50;
+  const pauseTime = 1800;
 
   function typeEffect() {
     const currentRole = roles[roleIndex];
@@ -51,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       roleIndex = (roleIndex + 1) % roles.length;
-      delay = 300;
+      delay = 350;
     }
 
     setTimeout(typeEffect, delay);
@@ -63,11 +61,84 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // ========================================================================
-  // STEP 2: CONTACT FORM VALIDATION & SUBMISSION
+  // STEP 2: AMBIENT CLOUD NETWORK NODE CANVAS ANIMATION
   // ========================================================================
-  /*
-    Validates user input fields, prevents default submit, and displays confirmation.
-  */
+  const canvas = document.getElementById('cloudBgCanvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    const particles = [];
+    const particleCount = Math.min(Math.floor(width / 25), 45);
+
+    class NodeParticle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.radius = Math.random() * 2 + 1;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#00f2fe';
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new NodeParticle());
+    }
+
+    function animateNetwork() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 140) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0, 242, 254, ${0.15 * (1 - distance / 140)})`;
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(animateNetwork);
+    }
+
+    animateNetwork();
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+  }
+
+
+  // ========================================================================
+  // STEP 3: CONTACT FORM VALIDATION
+  // ========================================================================
   const contactForm = document.getElementById('contactForm');
   const formAlert = document.getElementById('formAlert');
 

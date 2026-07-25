@@ -3,25 +3,27 @@
 <head>
   <!-- 
     ========================================================================
-    PORTFOLIO WEBSITE (OPTION 2) - NANDU SIVADAS
-    Role: Aspiring Cloud & DevOps Engineer
+    PORTFOLIO WEBSITE - NANDU SIVADAS
     ========================================================================
-    Features:
-    - Reduced, compact typography for high readability on all screen sizes.
-    - High-contrast text (#f8fafc & #cbd5e1) for maximum visibility.
-    - Static HTML5, Bootstrap 5.3.3, CSS3, and JavaScript.
-    - Step-by-step comments in HTML, CSS, and JS.
+    Features & Recent Fixes:
+    - Removed background layer behind Technical Skills section for seamless blending
+    - Hero Badge: Aspiring Cloud & DevOps Enthusiast
+    - Clean Profile Avatar with 3D Depth Breathing Movement
+    - Professional Continuous Animated Tech Logo Marquee Strip
+    - Top Featured Project #1: RHCE Capstone Project
+    - Documentation PDF links for all projects (Astra Linux, RHCE, WordPress, AWS Ansible)
+    - Step-by-step comments in HTML, CSS, and JS
     ========================================================================
   -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nandu Sivadas | Cloud & DevOps Engineer Portfolio</title>
+  <title>Nandu Sivadas | Cloud & DevOps Enthusiast Portfolio</title>
 
-  <!-- SEO Meta Description -->
-  <meta name="description" content="Portfolio of Nandu Sivadas - Aspiring Cloud & DevOps Engineer skilled in AWS, Ansible Playbooks, Linux RHEL Administration, Docker, Jenkins, and CI/CD pipelines.">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Nandu Sivadas - Aspiring Cloud & DevOps Enthusiast skilled in AWS, RHEL Linux, Ansible, Docker, Terraform, Jenkins, Prometheus, and Grafana.">
   <meta name="author" content="Nandu Sivadas">
 
-  <!-- Google Fonts: Inter (Body) & Plus Jakarta Sans (Headings) for crisp modern readability -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -32,24 +34,24 @@
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- Devicon CDN for tech stack logos -->
+  <!-- Devicon CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-  <!-- FontAwesome CDN for server & cloud icons -->
+  <!-- FontAwesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom Stylesheet (Option 2 Refined Typography & Contrast) -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
 
+  <!-- Background Wallpaper (< 50% opacity) & Canvas Particles -->
+  <div class="bg-cloud-image-overlay"></div>
+  <canvas id="cloudBgCanvas"></canvas>
+
   <!-- ========================================================================
-       STEP 1: NAVIGATION BAR (Compact Sticky Header)
+       STEP 1: NAVIGATION BAR
        ======================================================================== -->
-  <!-- 
-    A sleek, compact navigation bar with clear link contrast and 
-    a direct resume download action button.
-  -->
   <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
     <div class="container">
       
@@ -59,7 +61,7 @@
         <span class="brand-text">NANDU SIVADAS</span>
       </a>
 
-      <!-- Mobile Menu Toggle Button -->
+      <!-- Mobile Toggler -->
       <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -69,9 +71,10 @@
         <ul class="navbar-nav align-items-lg-center gap-lg-1">
           <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Technical Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           
@@ -89,76 +92,63 @@
 
 
   <!-- ========================================================================
-       STEP 2: HERO SECTION (Refined Font Sizes & High Visibility)
+       STEP 2: HERO SECTION
        ======================================================================== -->
-  <!-- 
-    Hero layout with reduced font dimensions, high contrast text (#f8fafc),
-    and compact spacing for better readability.
-  -->
-  <section id="hero" class="hero-wrapper pt-5 pb-4">
+  <section id="hero" class="hero-wrapper pt-5 pb-5 position-relative">
     <div class="container pt-5">
-      <div class="row align-items-center g-4 min-vh-70">
+      <div class="row align-items-center g-4 min-vh-75">
         
-        <!-- Hero Details Column -->
-        <div class="col-lg-7 text-center text-lg-start">
+        <!-- Left Column: Intro -->
+        <div class="col-lg-7 text-center text-lg-start z-2">
           
-          <!-- Compact Badge -->
-          <div class="hero-badge d-inline-flex align-items-center gap-2 mb-2">
+          <!-- Requested Hero Badge Text -->
+          <div class="hero-badge d-inline-flex align-items-center gap-2 mb-3">
             <span class="pulse-indicator"></span>
-            <span>Aspiring Cloud & DevOps Engineer</span>
+            <span>Aspiring Cloud & DevOps Enthusiast</span>
           </div>
 
-          <!-- Main Name Heading (Refined 2.2rem size for clean readability) -->
+          <!-- Main Name -->
           <h1 class="hero-title mb-2">
             Hi, I'm <span class="accent-text">Nandu Sivadas</span>
           </h1>
 
-          <!-- Typing Animation Subtitle -->
+          <!-- Animated Focus Line -->
           <h2 class="hero-subtitle mb-3">
             Focus: <span id="typing-text" class="text-cyan fw-semibold"></span><span class="typing-cursor">|</span>
           </h2>
 
-          <!-- High-Contrast Body Description -->
+          <!-- Description -->
           <p class="hero-desc mb-4">
-            Fresher with hands-on Cloud & DevOps exposure. Comfortable configuring core AWS services, automating Linux server deployments using Ansible playbooks, and troubleshooting infrastructure. Actively pursuing RHCSA, RHCE, and AWS Solutions Architect certifications.
+            Cloud & DevOps Intern @ ipsr solutions ltd with hands-on exposure in AWS Cloud, RHEL Linux Administration, Ansible Automation, Docker, Terraform, Jenkins, and Prometheus monitoring. Actively pursuing RHCSA, RHCE, and AWS Solutions Architect certifications.
           </p>
 
-          <!-- Tech Stack Badges Strip -->
-          <div class="tech-pill-container mb-4">
-            <span class="tech-pill"><i class="devicon-amazonwebservices-plain colored me-1"></i> AWS</span>
-            <span class="tech-pill"><i class="devicon-ansible-plain colored me-1"></i> Ansible</span>
-            <span class="tech-pill"><i class="devicon-redhat-plain colored me-1"></i> RHEL Linux</span>
-            <span class="tech-pill"><i class="devicon-docker-plain colored me-1"></i> Docker</span>
-            <span class="tech-pill"><i class="devicon-jenkins-line colored me-1"></i> Jenkins</span>
-            <span class="tech-pill"><i class="devicon-terraform-plain colored me-1"></i> Terraform</span>
-            <span class="tech-pill"><i class="devicon-python-plain colored me-1"></i> Python</span>
-            <span class="tech-pill"><i class="devicon-bash-plain colored me-1"></i> Bash</span>
-          </div>
-
-          <!-- Hero Action Buttons -->
+          <!-- Hero Buttons -->
           <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
-            <a href="#projects" class="btn btn-accent px-3 py-2">
-              <i class="bi bi-folder-fill me-1"></i> View Projects
+            <a href="#projects" class="btn btn-accent px-4 py-2">
+              <i class="bi bi-rocket-takeoff-fill me-1"></i> View RHCE & AWS Projects
             </a>
-            <a href="#contact" class="btn btn-outline-light-custom px-3 py-2">
+            <a href="#certifications" class="btn btn-outline-light-custom px-4 py-2">
+              <i class="bi bi-award-fill me-1"></i> Certifications
+            </a>
+            <a href="#contact" class="btn btn-outline-light-custom px-4 py-2">
               <i class="bi bi-envelope-fill me-1"></i> Contact Me
             </a>
           </div>
 
         </div>
 
-        <!-- Hero Avatar Column (Compact 200px Avatar) -->
-        <div class="col-lg-5 text-center">
-          <div class="avatar-card mx-auto">
-            <img src="./profile.jpg" alt="Nandu Sivadas Profile" class="avatar-img rounded-circle shadow-lg">
+        <!-- Right Column: Clean Profile Avatar with 3D Depth Movement -->
+        <div class="col-lg-5 text-center z-2">
+          <div class="profile-depth-container mx-auto">
             
-            <div class="avatar-info-card shadow">
-              <i class="fa-brands fa-aws text-warning fs-5"></i>
-              <div class="text-start">
-                <span class="d-block fw-bold text-white small">AWS & Ansible</span>
-                <span class="d-block text-slate extra-small">Cloud Infrastructure</span>
-              </div>
+            <!-- Ambient Glow -->
+            <div class="profile-ambient-glow"></div>
+
+            <!-- Profile Avatar (Clean 3D Depth Breathing Movement) -->
+            <div class="avatar-depth-card">
+              <img src="./profile.jpg" alt="Nandu Sivadas Profile Picture" class="avatar-img-depth rounded-circle shadow-lg">
             </div>
+
           </div>
         </div>
 
@@ -168,80 +158,75 @@
 
 
   <!-- ========================================================================
-       STEP 3: KEY HIGHLIGHTS STATS BAR
+       STEP 3: PROFESSIONAL ANIMATED TECH LOGO MARQUEE STRIP
        ======================================================================== -->
-  <section class="py-3 bg-card-dark border-top border-bottom border-slate">
-    <div class="container">
-      <div class="row g-3 text-center">
+  <div class="tech-marquee-wrapper py-3 border-top border-bottom border-slate">
+    <div class="marquee-track">
+      <div class="marquee-content d-flex align-items-center">
         
-        <div class="col-6 col-md-3">
-          <div class="p-2">
-            <div class="h4 fw-bold text-cyan mb-0">AWS Cloud</div>
-            <div class="text-slate extra-small">EC2, VPC, S3, RDS, Lambda</div>
-          </div>
-        </div>
+        <div class="marquee-item"><i class="devicon-amazonwebservices-plain colored me-2"></i> AWS Cloud</div>
+        <div class="marquee-item"><i class="bi bi-infinity text-cyan me-2"></i> DevOps</div>
+        <div class="marquee-item"><i class="devicon-redhat-plain colored me-2"></i> Red Hat RHEL</div>
+        <div class="marquee-item"><i class="devicon-ansible-plain colored me-2"></i> Ansible</div>
+        <div class="marquee-item"><i class="devicon-docker-plain colored me-2"></i> Docker</div>
+        <div class="marquee-item"><i class="devicon-terraform-plain colored me-2"></i> Terraform</div>
+        <div class="marquee-item"><i class="devicon-jenkins-line colored me-2"></i> Jenkins</div>
+        <div class="marquee-item"><i class="devicon-prometheus-original colored me-2"></i> Prometheus</div>
+        <div class="marquee-item"><i class="devicon-grafana-original colored me-2"></i> Grafana</div>
+        <div class="marquee-item"><i class="devicon-git-plain colored me-2"></i> Git & GitHub</div>
 
-        <div class="col-6 col-md-3">
-          <div class="p-2">
-            <div class="h4 fw-bold text-cyan mb-0">Ansible</div>
-            <div class="text-slate extra-small">Playbooks & Roles Automation</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3">
-          <div class="p-2">
-            <div class="h4 fw-bold text-cyan mb-0">Linux RHEL</div>
-            <div class="text-slate extra-small">System Admin & GRUB Recovery</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3">
-          <div class="p-2">
-            <div class="h4 fw-bold text-cyan mb-0">CI/CD</div>
-            <div class="text-slate extra-small">Docker, Jenkins & Git Workflows</div>
-          </div>
-        </div>
+        <!-- Duplicated items for seamless infinite loop -->
+        <div class="marquee-item"><i class="devicon-amazonwebservices-plain colored me-2"></i> AWS Cloud</div>
+        <div class="marquee-item"><i class="bi bi-infinity text-cyan me-2"></i> DevOps</div>
+        <div class="marquee-item"><i class="devicon-redhat-plain colored me-2"></i> Red Hat RHEL</div>
+        <div class="marquee-item"><i class="devicon-ansible-plain colored me-2"></i> Ansible</div>
+        <div class="marquee-item"><i class="devicon-docker-plain colored me-2"></i> Docker</div>
+        <div class="marquee-item"><i class="devicon-terraform-plain colored me-2"></i> Terraform</div>
+        <div class="marquee-item"><i class="devicon-jenkins-line colored me-2"></i> Jenkins</div>
+        <div class="marquee-item"><i class="devicon-prometheus-original colored me-2"></i> Prometheus</div>
+        <div class="marquee-item"><i class="devicon-grafana-original colored me-2"></i> Grafana</div>
+        <div class="marquee-item"><i class="devicon-git-plain colored me-2"></i> Git & GitHub</div>
 
       </div>
     </div>
-  </section>
+  </div>
 
 
   <!-- ========================================================================
-       STEP 4: ABOUT ME SECTION (High Text Visibility)
+       STEP 4: ABOUT ME SECTION
        ======================================================================== -->
-  <section id="about" class="py-4">
+  <section id="about" class="py-5">
     <div class="container py-2">
       
       <!-- Section Header -->
       <div class="section-header text-center mb-4">
         <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Background, core focus, and personal details</p>
+        <p class="section-subtitle">Professional profile, background summary, and contact information</p>
       </div>
 
       <div class="row g-4">
         
-        <!-- Left: Summary Description -->
+        <!-- Left: Summary -->
         <div class="col-lg-7">
           <div class="content-card p-4 h-100">
             <h3 class="card-heading mb-3"><i class="bi bi-person-badge-fill me-2 text-cyan"></i> Professional Profile</h3>
             
             <p class="card-text mb-3">
-              I am an aspiring Cloud & DevOps Engineer with hands-on exposure gained through my internship and self-driven AWS and Ansible projects. I specialize in deploying scalable LEMP applications, automating server setups, and configuring core AWS infrastructure.
+              I am a <strong class="text-cyan">Cloud & DevOps Intern @ ipsr solutions ltd</strong> with hands-on exposure in configuring core AWS services, automating Linux server deployments using Ansible playbooks, containerizing applications with Docker, and provisioning infrastructure.
             </p>
             
             <p class="card-text mb-4">
-              My background in <strong class="text-white">B.Sc. Mathematics with Computer Science</strong> equips me with structured analytical problem-solving skills, which I apply to infrastructure troubleshooting and automation.
+              My degree in <strong class="text-white">Bachelor of Science in Mathematics with Computer Science</strong> provides strong analytical problem-solving, structured database planning, and logical reasoning skills essential for cloud infrastructure engineering.
             </p>
 
             <h4 class="card-subheading mb-2">Core Competencies</h4>
             <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-slate-pill text-white">AWS Cloud</span>
-              <span class="badge bg-slate-pill text-white">DevOps & CI/CD</span>
-              <span class="badge bg-slate-pill text-white">Linux Administration</span>
-              <span class="badge bg-slate-pill text-white">Infrastructure Automation</span>
-              <span class="badge bg-slate-pill text-white">Network Security & SSL</span>
-              <span class="badge bg-slate-pill text-white">System Troubleshooting</span>
+              <span class="badge bg-slate-pill text-white">AWS Cloud Architecture</span>
+              <span class="badge bg-slate-pill text-white">Linux Administration (RHEL)</span>
+              <span class="badge bg-slate-pill text-white">Ansible Automation</span>
+              <span class="badge bg-slate-pill text-white">Docker & CI/CD Pipelines</span>
+              <span class="badge bg-slate-pill text-white">Prometheus & Grafana Monitoring</span>
+              <span class="badge bg-slate-pill text-white">Infrastructure as Code</span>
             </div>
           </div>
         </div>
@@ -250,9 +235,14 @@
         <div class="col-lg-5">
           <div class="content-card p-4 h-100 d-flex flex-column justify-content-between">
             <div>
-              <h3 class="card-heading mb-3"><i class="bi bi-info-circle-fill me-2 text-cyan"></i> Contact Information</h3>
+              <h3 class="card-heading mb-3"><i class="bi bi-info-circle-fill me-2 text-cyan"></i> Quick Information</h3>
               
               <div class="info-list">
+                <div class="info-item mb-3">
+                  <span class="info-label">Current Role</span>
+                  <span class="info-value text-cyan fw-bold">Cloud & DevOps Intern @ ipsr solutions ltd</span>
+                </div>
+
                 <div class="info-item mb-3">
                   <span class="info-label">Location</span>
                   <span class="info-value">Kottayam, Kerala, India</span>
@@ -267,20 +257,15 @@
                   <span class="info-label">Email</span>
                   <a href="mailto:nandusivadas98@gmail.com" class="info-link">nandusivadas98@gmail.com</a>
                 </div>
-
-                <div class="info-item mb-3">
-                  <span class="info-label">Education</span>
-                  <span class="info-value">B.Sc. Mathematics with Computer Science</span>
-                </div>
               </div>
             </div>
 
             <div class="d-flex gap-2 pt-3 border-top border-slate">
               <a href="https://github.com/nandusivadas" target="_blank" class="btn btn-outline-light-custom btn-sm flex-grow-1 text-center">
-                <i class="bi bi-github me-1"></i> GitHub
+                <i class="bi bi-github me-1"></i> GitHub Profile
               </a>
               <a href="https://linkedin.com/in/nandusivadas" target="_blank" class="btn btn-outline-light-custom btn-sm flex-grow-1 text-center">
-                <i class="bi bi-linkedin me-1 text-info"></i> LinkedIn
+                <i class="bi bi-linkedin me-1 text-info"></i> LinkedIn Profile
               </a>
             </div>
 
@@ -293,126 +278,240 @@
 
 
   <!-- ========================================================================
-       STEP 5: SKILLS SECTION (Clear Compact Grid)
+       STEP 5: TECHNICAL SKILLS SECTION (Seamless Background - No Extra Dark Layer)
        ======================================================================== -->
-  <section id="skills" class="py-4 bg-card-dark">
+  <!-- 
+    Removed background tint layer (bg-card-dark) so technical skills blend 
+    seamlessly with the main background canvas and field image.
+  -->
+  <section id="skills" class="py-5">
     <div class="container py-2">
       
       <!-- Section Header -->
       <div class="section-header text-center mb-4">
         <h2 class="section-title">Technical Skills</h2>
-        <p class="section-subtitle">Tools, platforms, and technologies I work with</p>
+        <p class="section-subtitle">Comprehensive DevOps & Infrastructure competencies organized by domain</p>
       </div>
 
       <div class="row g-3">
         
-        <!-- Skill Card 1: Cloud Platforms -->
+        <!-- Category 1: Cloud – AWS -->
         <div class="col-md-6 col-lg-4">
-          <div class="content-card p-3 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="fa-brands fa-aws fs-4 text-warning"></i>
-              <h3 class="card-heading-sm mb-0">Cloud Platforms</h3>
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-warning-subtle text-warning">
+                <i class="fa-brands fa-aws fs-3"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Cloud – AWS</h3>
+                <span class="text-slate extra-small">Amazon Web Services</span>
+              </div>
             </div>
-            <p class="card-desc mb-2">AWS services configuration, VPC network setup, and security.</p>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="skill-tag">EC2</span>
-              <span class="skill-tag">S3</span>
-              <span class="skill-tag">RDS</span>
-              <span class="skill-tag">IAM</span>
-              <span class="skill-tag">VPC</span>
-              <span class="skill-tag">Lambda</span>
-              <span class="skill-tag">Route 53</span>
-              <span class="skill-tag">EventBridge</span>
-              <span class="skill-tag">Auto Scaling</span>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">EC2</span>
+              <span class="skill-chip">VPC</span>
+              <span class="skill-chip">IAM</span>
+              <span class="skill-chip">S3</span>
+              <span class="skill-chip">RDS</span>
+              <span class="skill-chip">EBS</span>
+              <span class="skill-chip">EFS</span>
+              <span class="skill-chip">Route 53</span>
+              <span class="skill-chip">ALB</span>
+              <span class="skill-chip">NLB</span>
+              <span class="skill-chip">NAT</span>
+              <span class="skill-chip">Lambda</span>
+              <span class="skill-chip">SNS</span>
+              <span class="skill-chip">AMI</span>
+              <span class="skill-chip">Auto Scaling</span>
             </div>
           </div>
         </div>
 
-        <!-- Skill Card 2: DevOps & IaC -->
+        <!-- Category 2: Linux Administration -->
         <div class="col-md-6 col-lg-4">
-          <div class="content-card p-3 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-diagram-3-fill fs-4 text-cyan"></i>
-              <h3 class="card-heading-sm mb-0">DevOps & IaC</h3>
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-danger-subtle text-danger">
+                <i class="devicon-redhat-plain fs-3"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Linux Administration</h3>
+                <span class="text-slate extra-small">RHEL & System Management</span>
+              </div>
             </div>
-            <p class="card-desc mb-2">Automation playbooks, containerization, and version control.</p>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="skill-tag">Ansible Playbooks</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Jenkins</span>
-              <span class="skill-tag">Terraform</span>
-              <span class="skill-tag">Git / GitHub</span>
-              <span class="skill-tag">CI/CD Pipelines</span>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">RHEL</span>
+              <span class="skill-chip">Users & Groups</span>
+              <span class="skill-chip">Permissions</span>
+              <span class="skill-chip">Processes</span>
+              <span class="skill-chip">Services</span>
+              <span class="skill-chip">SSH</span>
+              <span class="skill-chip">Networking</span>
+              <span class="skill-chip">Storage</span>
+              <span class="skill-chip">LVM</span>
+              <span class="skill-chip">NFS</span>
+              <span class="skill-chip">SELinux</span>
+              <span class="skill-chip">Firewalld</span>
+              <span class="skill-chip">Logs</span>
             </div>
           </div>
         </div>
 
-        <!-- Skill Card 3: Operating Systems -->
+        <!-- Category 3: Automation -->
         <div class="col-md-6 col-lg-4">
-          <div class="content-card p-3 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="devicon-redhat-plain fs-4 text-danger"></i>
-              <h3 class="card-heading-sm mb-0">Operating Systems</h3>
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-cyan-subtle text-cyan">
+                <i class="devicon-ansible-plain fs-3 colored"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Automation</h3>
+                <span class="text-slate extra-small">Configuration Management</span>
+              </div>
             </div>
-            <p class="card-desc mb-2">Linux server administration and kernel boot troubleshooting.</p>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="skill-tag">Red Hat (RHEL)</span>
-              <span class="skill-tag">Ubuntu Server</span>
-              <span class="skill-tag">Astra Linux</span>
-              <span class="skill-tag">Windows</span>
-              <span class="skill-tag">GRUB2 Recovery</span>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">Ansible</span>
+              <span class="skill-chip">Playbooks</span>
+              <span class="skill-chip">Roles</span>
+              <span class="skill-chip">Variables</span>
+              <span class="skill-chip">Facts</span>
+              <span class="skill-chip">Task Control</span>
             </div>
           </div>
         </div>
 
-        <!-- Skill Card 4: Web Servers & Networking -->
+        <!-- Category 4: Containers -->
         <div class="col-md-6 col-lg-4">
-          <div class="content-card p-3 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="devicon-nginx-original fs-4 text-success"></i>
-              <h3 class="card-heading-sm mb-0">Web Servers & Networking</h3>
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-info-subtle text-info">
+                <i class="devicon-docker-plain fs-3 colored"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Containers</h3>
+                <span class="text-slate extra-small">Application Isolation</span>
+              </div>
             </div>
-            <p class="card-desc mb-2">LEMP/LAMP web server hosting, SSL setup, and firewalls.</p>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="skill-tag">Nginx</span>
-              <span class="skill-tag">Apache HTTP</span>
-              <span class="skill-tag">DNS</span>
-              <span class="skill-tag">SSH</span>
-              <span class="skill-tag">Firewalls</span>
-              <span class="skill-tag">SSL / TLS</span>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">Dockerfile</span>
+              <span class="skill-chip">Images</span>
+              <span class="skill-chip">Containers</span>
+              <span class="skill-chip">Volumes</span>
+              <span class="skill-chip">Networking</span>
+              <span class="skill-chip">Docker Compose</span>
             </div>
           </div>
         </div>
 
-        <!-- Skill Card 5: Scripting & Languages -->
+        <!-- Category 5: CI/CD -->
         <div class="col-md-6 col-lg-4">
-          <div class="content-card p-3 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="devicon-python-plain fs-4 text-info"></i>
-              <h3 class="card-heading-sm mb-0">Scripting & Code</h3>
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-warning-subtle text-warning">
+                <i class="devicon-jenkins-line fs-3 colored"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">CI/CD</h3>
+                <span class="text-slate extra-small">Continuous Integration & Delivery</span>
+              </div>
             </div>
-            <p class="card-desc mb-2">Infrastructure scripting and scheduled cloud automation.</p>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Bash</span>
-              <span class="skill-tag">Shell Scripting</span>
-              <span class="skill-tag">YAML</span>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">Jenkins</span>
+              <span class="skill-chip">CI/CD Pipelines</span>
             </div>
           </div>
         </div>
 
-        <!-- Skill Card 6: Databases -->
+        <!-- Category 6: Infrastructure as Code -->
         <div class="col-md-6 col-lg-4">
-          <div class="content-card p-3 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="devicon-mysql-plain fs-4 text-primary"></i>
-              <h3 class="card-heading-sm mb-0">Databases</h3>
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-primary-subtle text-primary">
+                <i class="devicon-terraform-plain fs-3 colored"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Infrastructure as Code</h3>
+                <span class="text-slate extra-small">Automated Provisioning</span>
+              </div>
             </div>
-            <p class="card-desc mb-2">Relational database configuration and cloud database management.</p>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">MariaDB</span>
-              <span class="skill-tag">AWS RDS</span>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">Terraform</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 7: Monitoring -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-danger-subtle text-danger">
+                <i class="devicon-prometheus-original fs-3 colored"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Monitoring & Metrics</h3>
+                <span class="text-slate extra-small">Observability & Dashboards</span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">Prometheus</span>
+              <span class="skill-chip">Grafana</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 8: Version Control -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-secondary-subtle text-light">
+                <i class="devicon-git-plain fs-3 colored"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Version Control</h3>
+                <span class="text-slate extra-small">Code & Configuration Management</span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 9: Scripting & Programming -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-info-subtle text-info">
+                <i class="devicon-python-plain fs-3 colored"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Scripting & Code</h3>
+                <span class="text-slate extra-small">Automation Scripting</span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">Bash/Shell Scripting</span>
+              <span class="skill-chip">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 10: Build Tools -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card skill-glass-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="skill-icon-badge bg-cyan-subtle text-cyan">
+                <i class="bi bi-tools fs-3"></i>
+              </div>
+              <div>
+                <h3 class="card-heading-sm mb-0 text-white">Build Tools</h3>
+                <span class="text-slate extra-small">Build & Package Automation</span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-1-5">
+              <span class="skill-chip">Maven</span>
             </div>
           </div>
         </div>
@@ -423,100 +522,170 @@
 
 
   <!-- ========================================================================
-       STEP 6: PROJECTS SECTION (Crisp Text & High Visibility)
+       STEP 6: FEATURED PROJECTS SECTION
        ======================================================================== -->
-  <section id="projects" class="py-4">
+  <section id="projects" class="py-5 bg-card-dark">
     <div class="container py-2">
       
       <!-- Section Header -->
       <div class="section-header text-center mb-4">
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Hands-on AWS and Ansible infrastructure projects from my resume</p>
+        <p class="section-subtitle">Enterprise Linux automation and AWS cloud projects with GitHub source code & documentation</p>
       </div>
 
       <div class="row g-4">
         
-        <!-- Project 1: WordPress Deployment -->
+        <!-- PROJECT #1 (MOST IMPORTANT): RHCE Capstone Project -->
+        <div class="col-lg-12">
+          <div class="content-card p-4 border-cyan-glow-card">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-danger-subtle text-danger px-3 py-1-5 fw-bold"><i class="devicon-redhat-plain me-1"></i> TOP CAPSTONE PROJECT</span>
+                <span class="badge bg-accent-subtle text-cyan px-3 py-1-5">RHEL + Ansible + AWS</span>
+              </div>
+              <span class="text-slate extra-small">Enterprise Infrastructure Automation</span>
+            </div>
+            
+            <h3 class="card-heading text-white fs-4 mb-2 mt-2">
+              RHCE Capstone Project – Automated Enterprise Linux Infrastructure Deployment using Ansible
+            </h3>
+            
+            <p class="text-cyan small fw-semibold mb-3">
+              Tech Stack: Red Hat Enterprise Linux (RHEL), Ansible, AWS EC2, Apache, MariaDB, NFS File Server, HAProxy Load Balancer, Prometheus, Grafana, rsyslog, Git
+            </p>
+
+            <ul class="project-list text-slate mb-4">
+              <li>Designed and automated a 6-node enterprise Linux infrastructure on AWS EC2 comprising an Ansible Control Node, 2 Apache Web Servers, MariaDB Database Server, NFS File Server, and HAProxy Load Balancer.</li>
+              <li>Implemented Infrastructure as Code (IaC) principles utilizing static and AWS EC2 dynamic inventories, reusable Ansible Roles, Jinja2 templates, and handlers.</li>
+              <li>Configured automated user management, security hardening (SELinux Enforcing, Firewalld HTTP/HTTPS/SSH ports), NFS shared directory mounting, and automated cron backup tasks.</li>
+              <li>Integrated system observability with Prometheus metric collection, Node Exporter agent deployment, Grafana dashboard visualization, and centralized rsyslog logging.</li>
+            </ul>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top border-slate">
+              <div class="d-flex flex-wrap gap-1">
+                <span class="skill-chip">RHEL</span>
+                <span class="skill-chip">Ansible Roles</span>
+                <span class="skill-chip">HAProxy</span>
+                <span class="skill-chip">NFS</span>
+                <span class="skill-chip">Prometheus & Grafana</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="https://github.com/nandusivadas/RHCE-Capstone-Project.git" target="_blank" class="btn btn-outline-light-custom btn-sm px-3">
+                  <i class="bi bi-github me-1"></i> GitHub Repo
+                </a>
+                <a href="./RHCE_Capstone_Project_Documentation.pdf" target="_blank" class="btn btn-accent btn-sm px-3">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> View Documentation PDF
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROJECT #2: WordPress Deployment -->
         <div class="col-lg-12">
           <div class="content-card p-4">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
               <h3 class="card-heading text-white mb-0">Automated WordPress Infrastructure Deployment using Ansible</h3>
-              <span class="badge bg-accent-subtle text-cyan">Ansible + AWS EC2</span>
+              <span class="badge bg-accent-subtle text-cyan px-3 py-1">Ansible Roles + AWS EC2</span>
             </div>
             
             <p class="text-cyan small fw-semibold mb-3">
-              Tech Stack: AWS, EC2, Linux, Ansible, Nginx, PHP, MariaDB, WordPress, Git
+              Tech Stack: AWS EC2, Linux, Ansible Roles, Nginx, PHP-FPM, MariaDB, WordPress, phpMyAdmin, SFTP, Let's Encrypt SSL
             </p>
 
-            <ul class="project-list text-slate mb-3">
-              <li>Automated end-to-end deployment of a LEMP-based WordPress application on AWS EC2 using reusable Ansible Playbooks and Roles.</li>
-              <li>Configured Nginx, PHP-FPM, MariaDB, SSL, and SFTP to deliver a secure, production-style web hosting environment.</li>
+            <ul class="project-list text-slate mb-4">
+              <li>Automated end-to-end deployment of a secure LEMP-based WordPress application on AWS EC2 using reusable Ansible Playbooks and Roles.</li>
+              <li>Configured Nginx reverse proxy, PHP-FPM 8+, MariaDB, phpMyAdmin, SFTP access, and Let's Encrypt HTTPS SSL encryption.</li>
               <li>Replaced a multi-step manual server setup with a single automated playbook run, cutting repeat-deployment time from hours to minutes.</li>
             </ul>
 
-            <div class="d-flex flex-wrap gap-1">
-              <span class="skill-tag">AWS EC2</span>
-              <span class="skill-tag">Ansible Playbooks</span>
-              <span class="skill-tag">Nginx & PHP-FPM</span>
-              <span class="skill-tag">MariaDB</span>
-              <span class="skill-tag">SSL Certificate</span>
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top border-slate">
+              <div class="d-flex flex-wrap gap-1">
+                <span class="skill-chip">AWS EC2</span>
+                <span class="skill-chip">Ansible Roles</span>
+                <span class="skill-chip">LEMP Stack</span>
+                <span class="skill-chip">SSL Encryption</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="https://github.com/nandusivadas/Automated-WordPress-Deployment-with-Ansible" target="_blank" class="btn btn-outline-light-custom btn-sm px-3">
+                  <i class="bi bi-github me-1"></i> GitHub Repo
+                </a>
+                <a href="./WordPress_Ansible_Documentation.pdf" target="_blank" class="btn btn-accent btn-sm px-3">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> View Documentation PDF
+                </a>
+              </div>
             </div>
+
           </div>
         </div>
 
-        <!-- Project 2: AWS Infrastructure Automation -->
+        <!-- PROJECT #3: AWS Infrastructure Automation -->
         <div class="col-lg-6">
           <div class="content-card p-4 h-100 d-flex flex-column justify-content-between">
             <div>
               <div class="d-flex align-items-center justify-content-between mb-2">
                 <h3 class="card-heading text-white mb-0">AWS Infrastructure Automation using Ansible</h3>
-                <span class="badge bg-slate-pill text-white extra-small">Multi-Node</span>
+                <span class="badge bg-slate-pill text-white extra-small">Multi-Region AWS</span>
               </div>
 
               <p class="text-cyan small fw-semibold mb-3">
-                Tech Stack: AWS EC2, Amazon Linux, Ansible, Docker, Git, Apache, SSH
+                Tech Stack: AWS EC2, Amazon Linux 2023, Ansible Navigator, Docker, Git, Apache, SSH
               </p>
 
-              <ul class="project-list text-slate mb-3">
-                <li>Built a 3-node AWS infrastructure (1 control node, 2 managed nodes) using SSH key-based authentication.</li>
-                <li>Automated Apache installation and configuration across all managed nodes using Ansible Playbooks and Roles.</li>
-                <li>Recreated the entire environment in a second AWS Region from version-controlled configuration, validating setup portability and repeatability.</li>
+              <ul class="project-list text-slate mb-4">
+                <li>Built a 3-node AWS infrastructure (1 control node, 2 managed nodes) using passwordless SSH key authentication.</li>
+                <li>Automated Apache web server installation across all managed nodes using Ansible Roles inside Docker containers via Ansible Navigator.</li>
+                <li>Recreated the entire environment in a second AWS Region (Hyderabad) from version-controlled GitHub configuration.</li>
               </ul>
             </div>
 
-            <div class="d-flex flex-wrap gap-1 pt-2 border-top border-slate">
-              <span class="skill-tag">3-Node Cluster</span>
-              <span class="skill-tag">SSH Keys</span>
-              <span class="skill-tag">Multi-Region AWS</span>
+            <div class="pt-3 border-top border-slate">
+              <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center">
+                <span class="skill-chip">3-Node Cluster</span>
+                <div class="d-flex gap-2">
+                  <a href="https://github.com/nandusivadas/AWS-Infrastructure-Automation-using-Ansible" target="_blank" class="btn btn-outline-light-custom btn-sm">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="./AWS_Ansible_Automation_Documentation.pdf" target="_blank" class="btn btn-accent btn-sm">
+                    <i class="bi bi-file-earmark-pdf-fill"></i> Doc PDF
+                  </a>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 
-        <!-- Project 3: Astra Linux System Recovery -->
+        <!-- PROJECT #4: Astra Linux System Recovery & Troubleshooting -->
         <div class="col-lg-6">
           <div class="content-card p-4 h-100 d-flex flex-column justify-content-between">
             <div>
               <div class="d-flex align-items-center justify-content-between mb-2">
                 <h3 class="card-heading text-white mb-0">Astra Linux System Recovery & Troubleshooting</h3>
-                <span class="badge bg-slate-pill text-white extra-small">Linux Admin</span>
+                <span class="badge bg-slate-pill text-white extra-small">Kernel Recovery</span>
               </div>
 
               <p class="text-cyan small fw-semibold mb-3">
-                Tech Stack: Astra Linux, GRUB2, Linux Boot Process, VMware
+                Tech Stack: Astra Linux, GRUB2 Bootloader, Linux Boot Process, initramfs, VMware
               </p>
 
-              <ul class="project-list text-slate mb-3">
-                <li>Diagnosed and recovered a non-bootable Astra Linux system caused by GRUB bootloader corruption.</li>
-                <li>Restored the Linux boot process using GRUB shell commands and initramfs emergency recovery techniques.</li>
-                <li>Rebuilt and validated the GRUB configuration to restore normal system startup with zero data loss.</li>
+              <ul class="project-list text-slate mb-4">
+                <li>Diagnosed and recovered a non-bootable Astra Linux system caused by missing GRUB configuration file.</li>
+                <li>Restored the Linux boot process using GRUB shell rescue commands and initramfs emergency recovery techniques.</li>
+                <li>Rebuilt and regenerated GRUB configuration (`grub2-mkconfig`) to restore normal system startup with zero data loss.</li>
               </ul>
             </div>
 
-            <div class="d-flex flex-wrap gap-1 pt-2 border-top border-slate">
-              <span class="skill-tag">GRUB2 Bootloader</span>
-              <span class="skill-tag">initramfs Recovery</span>
-              <span class="skill-tag">Zero Data Loss</span>
+            <div class="pt-3 border-top border-slate">
+              <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center">
+                <span class="skill-chip">GRUB2 & initramfs</span>
+                <a href="./Astra_Linux_Documentation.pdf" target="_blank" class="btn btn-accent btn-sm">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> View Documentation PDF
+                </a>
+              </div>
             </div>
+
           </div>
         </div>
 
@@ -526,65 +695,56 @@
 
 
   <!-- ========================================================================
-       STEP 7: EXPERIENCE & EDUCATION SECTION
+       STEP 7: WORK EXPERIENCE SECTION
        ======================================================================== -->
-  <section id="experience" class="py-4 bg-card-dark">
+  <section id="experience" class="py-5">
     <div class="container py-2">
       
       <!-- Section Header -->
       <div class="section-header text-center mb-4">
-        <h2 class="section-title">Experience & Education</h2>
-        <p class="section-subtitle">Work history, internship, and academic background</p>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Practical internship exposure and past professional roles</p>
       </div>
 
       <div class="row g-4">
         
-        <!-- Experience Card 1: Cloud & DevOps Intern -->
+        <!-- Experience Card 1: Cloud & DevOps Intern @ ipsr solutions ltd -->
         <div class="col-lg-6">
           <div class="content-card p-4 h-100">
             <div class="d-flex justify-content-between align-items-start mb-2">
               <div>
                 <h3 class="card-heading text-white mb-1">Cloud & DevOps Intern</h3>
-                <span class="text-cyan small d-block">Production Infrastructure Tasks</span>
+                <span class="text-cyan small fw-bold d-block"><i class="bi bi-building me-1"></i> ipsr solutions ltd</span>
               </div>
-              <span class="badge bg-accent-subtle text-cyan">Jan 2026 – Present</span>
+              <span class="badge bg-accent-subtle text-cyan px-3 py-1">Jan 2026 – Present</span>
             </div>
 
-            <ul class="project-list text-slate mb-0">
-              <li>Configured AWS services including EC2, VPC, IAM, Route 53, ALB, Auto Scaling, and RDS as part of cloud tasks.</li>
-              <li>Deployed secure LEMP web applications using Nginx, Security Groups, NAT Gateway, and Amazon SNS.</li>
-              <li>Automated EC2 start/stop scheduling using AWS Lambda, EventBridge, and Bash scripts to reduce runtime costs.</li>
-              <li>Used Git and GitHub for version control while gaining practical exposure to Docker and Jenkins CI/CD workflows.</li>
+            <ul class="project-list text-slate mb-0 mt-3">
+              <li>Configured AWS services including EC2, VPC, IAM, Route 53, ALB, Auto Scaling, and RDS as part of production infrastructure tasks.</li>
+              <li>Deployed secure LEMP web applications using Nginx, Security Groups, NAT Gateway, and Amazon SNS notifications.</li>
+              <li>Automated EC2 start/stop scheduling using AWS Lambda, Amazon EventBridge, and Bash scripts to reduce instance runtime costs.</li>
+              <li>Used Git and GitHub for version control while gaining practical exposure to Docker containerization and Jenkins CI/CD workflows.</li>
             </ul>
           </div>
         </div>
 
         <!-- Experience Card 2: Studio Administrator -->
         <div class="col-lg-6">
-          <div class="content-card p-4 h-100 d-flex flex-column justify-content-between">
-            <div>
-              <div class="d-flex justify-content-between align-items-start mb-2">
-                <div>
-                  <h3 class="card-heading text-white mb-1">Studio Administrator & Multimedia Designer</h3>
-                  <span class="text-slate small d-block">Cross-Team Workflow Management</span>
-                </div>
-                <span class="badge bg-slate-pill text-white">2020 – 2025</span>
+          <div class="content-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div>
+                <h3 class="card-heading text-white mb-1">Studio Administrator & Multimedia Designer</h3>
+                <span class="text-slate small d-block"><i class="bi bi-diagram-2 me-1"></i> Operations & Workflow Management</span>
               </div>
-
-              <p class="card-text mb-3">
-                Managed daily studio operations and cross-team workflow, consistently delivering client projects on schedule.
-              </p>
+              <span class="badge bg-slate-pill text-white px-3 py-1">2020 – 2025</span>
             </div>
 
-            <!-- Education Box -->
-            <div class="p-3 bg-dark-pill rounded border border-slate mt-3">
-              <div class="d-flex justify-content-between align-items-center mb-1">
-                <h4 class="h6 text-white mb-0"><i class="bi bi-mortarboard-fill text-cyan me-1"></i> B.Sc. Mathematics with Computer Science</h4>
-                <span class="text-cyan extra-small">MG University, Kerala</span>
-              </div>
-              <p class="text-slate extra-small mb-0">CGPA: 6.0 / 10 | Strong analytical, logical, and computer science foundation.</p>
-            </div>
-
+            <p class="card-text mb-3 mt-3">
+              Managed daily studio operations, digital workflow, and cross-team communication, delivering client projects on schedule.
+            </p>
+            <p class="card-text text-slate mb-0">
+              Key Traits Gained: Time management, cross-functional team leadership, project coordination, and structured problem solving.
+            </p>
           </div>
         </div>
 
@@ -594,34 +754,128 @@
 
 
   <!-- ========================================================================
-       STEP 8: CERTIFICATIONS SECTION
+       STEP 8: EDUCATION SECTION
        ======================================================================== -->
-  <section id="certifications" class="py-4">
+  <section id="education" class="py-5 bg-card-dark">
     <div class="container py-2">
       
       <!-- Section Header -->
       <div class="section-header text-center mb-4">
-        <h2 class="section-title">Certifications</h2>
-        <p class="section-subtitle">Ongoing professional industry certifications</p>
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Academic degree and university qualifications</p>
       </div>
 
-      <div class="row g-3 justify-content-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="content-card p-4 text-center text-md-start d-flex flex-column flex-md-row align-items-center gap-4">
+            
+            <div class="edu-icon-box bg-accent-subtle text-cyan p-3 rounded-circle fs-2 flex-shrink-0">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <div>
+              <div class="d-flex flex-wrap justify-content-center justify-content-md-between align-items-center gap-2 mb-2">
+                <h3 class="card-heading text-white mb-0">Bachelor of Science, Mathematics with Computer Science</h3>
+                <span class="badge bg-slate-pill text-white">Graduated</span>
+              </div>
+              
+              <p class="text-cyan small fw-semibold mb-2">
+                <i class="bi bi-bank me-1"></i> MG University, Kerala | <strong class="text-white">CGPA: 6.0 / 10</strong>
+              </p>
+
+              <p class="card-text text-slate mb-0">
+                Built a solid foundation in discrete mathematics, algorithmic reasoning, relational databases, and computer science fundamentals.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 9: CERTIFICATIONS SECTION
+       ======================================================================== -->
+  <section id="certifications" class="py-5">
+    <div class="container py-2">
+      
+      <!-- Section Header -->
+      <div class="section-header text-center mb-4">
+        <h2 class="section-title">Certifications & Training</h2>
+        <p class="section-subtitle">Verified industry training credentials and ongoing certifications</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
         
-        <div class="col-md-6 col-lg-5">
-          <div class="content-card p-3 text-center">
-            <i class="devicon-redhat-plain fs-2 text-danger mb-2 d-block"></i>
-            <h3 class="card-heading-sm text-white mb-1">RHCSA & RHCE</h3>
-            <p class="text-slate extra-small mb-2">Red Hat Certified System Administrator & Engineer</p>
-            <span class="badge bg-warning-subtle text-warning px-3 py-1">In Progress (Target: July 2026)</span>
+        <!-- Cert 1: IPSR AWS Training -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card p-4 h-100 text-center d-flex flex-column justify-content-between">
+            <div>
+              <div class="cert-badge-icon bg-warning-subtle text-warning mx-auto mb-3">
+                <i class="fa-brands fa-aws fs-2"></i>
+              </div>
+              <h3 class="card-heading text-white mb-1">AWS Training – Industry-led Training</h3>
+              <p class="text-cyan small fw-semibold mb-2">IPSR Solutions Limited</p>
+              
+              <div class="badge bg-success-subtle text-success px-3 py-1 mb-2 fw-bold fs-6">
+                Grade: A
+              </div>
+              
+              <p class="text-slate extra-small mb-3">
+                Successfully completed AWS Industry-led Training securing Grade A (Certificate ID: gYS7VwAJAP).
+              </p>
+            </div>
+
+            <div>
+              <a href="./AWS_IPSR_Certificate.pdf" target="_blank" class="btn btn-accent btn-sm w-100 py-2">
+                <i class="bi bi-file-earmark-check-fill me-1"></i> [View Certificate]
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-5">
-          <div class="content-card p-3 text-center">
-            <i class="fa-brands fa-aws fs-2 text-warning mb-2 d-block"></i>
-            <h3 class="card-heading-sm text-white mb-1">AWS Certified Solutions Architect – Associate</h3>
-            <p class="text-slate extra-small mb-2">Amazon Web Services Associate Certification</p>
-            <span class="badge bg-warning-subtle text-warning px-3 py-1">In Progress</span>
+        <!-- Cert 2: RHCSA (Target: Aug 14) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card p-4 h-100 text-center d-flex flex-column justify-content-between">
+            <div>
+              <div class="cert-badge-icon bg-danger-subtle text-danger mx-auto mb-3">
+                <i class="devicon-redhat-plain fs-2"></i>
+              </div>
+              <h3 class="card-heading text-white mb-1">RHCSA</h3>
+              <p class="text-slate small mb-3">Red Hat Certified System Administrator</p>
+              
+              <div class="badge bg-cyan-subtle-pill text-cyan px-3 py-2 fw-semibold mb-3 border border-cyan-subtle">
+                <i class="bi bi-hourglass-split me-1"></i> In Progress (Target: Aug 14)
+              </div>
+            </div>
+            
+            <p class="text-slate extra-small mb-0">
+              Focusing on RHEL System Administration, User Management, LVM Storage, and Security.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cert 3: RHCE -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card p-4 h-100 text-center d-flex flex-column justify-content-between">
+            <div>
+              <div class="cert-badge-icon bg-danger-subtle text-danger mx-auto mb-3">
+                <i class="devicon-ansible-plain fs-2 colored"></i>
+              </div>
+              <h3 class="card-heading text-white mb-1">RHCE</h3>
+              <p class="text-slate small mb-3">Red Hat Certified Engineer</p>
+              
+              <div class="badge bg-cyan-subtle-pill text-cyan px-3 py-2 fw-semibold mb-3 border border-cyan-subtle">
+                <i class="bi bi-hourglass-split me-1"></i> In Progress
+              </div>
+            </div>
+            
+            <p class="text-slate extra-small mb-0">
+              Focusing on Ansible Automation, Playbook roles, and Enterprise Infrastructure.
+            </p>
           </div>
         </div>
 
@@ -631,25 +885,25 @@
 
 
   <!-- ========================================================================
-       STEP 9: CONTACT SECTION & FORM
+       STEP 10: CONTACT SECTION & FORM
        ======================================================================== -->
-  <section id="contact" class="py-4 bg-card-dark">
+  <section id="contact" class="py-5 bg-card-dark">
     <div class="container py-2">
       
       <!-- Section Header -->
       <div class="section-header text-center mb-4">
         <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Let's discuss entry-level Cloud & DevOps opportunities</p>
+        <p class="section-subtitle">Reach out for entry-level Cloud & DevOps Engineering opportunities</p>
       </div>
 
       <div class="row g-4">
         
-        <!-- Left: Quick Links -->
+        <!-- Contact Information -->
         <div class="col-lg-5">
           <div class="content-card p-4 h-100">
             <h3 class="card-heading text-white mb-3">Connect With Me</h3>
             <p class="card-text mb-4">
-              I am actively seeking an entry-level Cloud/DevOps Engineer role. Feel free to send a message or reach out directly!
+              I am actively looking for entry-level Cloud & DevOps Engineer roles. Feel free to contact me directly for job opportunities or inquiries!
             </p>
 
             <div class="info-list mb-4">
@@ -681,12 +935,11 @@
           </div>
         </div>
 
-        <!-- Right: Contact Form -->
+        <!-- Contact Form -->
         <div class="col-lg-7">
           <div class="content-card p-4">
             <h3 class="card-heading text-white mb-3">Send a Message</h3>
             
-            <!-- Success Alert Notification -->
             <div id="formAlert" class="alert alert-success d-none py-2 mb-3" role="alert">
               <i class="bi bi-check-circle-fill me-1"></i> Thank you! Your message has been sent successfully.
             </div>
@@ -705,7 +958,7 @@
 
                 <div class="col-12">
                   <label for="subject" class="form-label text-slate small mb-1">Subject</label>
-                  <input type="text" class="form-control form-control-custom" id="subject" placeholder="Job Opportunity" required>
+                  <input type="text" class="form-control form-control-custom" id="subject" placeholder="DevOps Job Opportunity" required>
                 </div>
 
                 <div class="col-12">
@@ -730,7 +983,7 @@
 
 
   <!-- ========================================================================
-       STEP 10: FOOTER
+       STEP 11: FOOTER
        ======================================================================== -->
   <footer class="footer py-3 text-center border-top border-slate">
     <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
