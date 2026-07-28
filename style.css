@@ -640,6 +640,14 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   font-size: 0.95rem !important;
 }
 
+.media-company {
+  font-size: 0.9rem !important;
+}
+
+.ipsr-company {
+  font-size: 0.9rem !important;
+}
+
 /* Slightly larger text in Featured Projects cards only. */
 #projects .card-heading.fs-5 {
   font-size: 1.35rem !important;
