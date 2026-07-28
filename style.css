@@ -117,6 +117,10 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 .text-slate { color: var(--text-slate) !important; }
 .extra-small { font-size: 0.775rem; }
 
+.education-description {
+  font-size: 0.925rem !important;
+}
+
 .bg-slate-pill {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--border-slate);
@@ -138,7 +142,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 .badge-accent-subtitle {
   color: var(--cyan-accent);
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -287,7 +291,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 .hero-title-lg {
-  font-size: 2.5rem !important;
+  font-size: 3rem !important;
 }
 
 .accent-text {
@@ -305,6 +309,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   color: var(--text-slate);
   max-width: 620px;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .typing-cursor {
@@ -504,6 +509,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   font-size: 1rem;
   line-height: 1.65;
   color: var(--text-slate);
+  text-align: justify;
 }
 
 .content-card {
@@ -589,6 +595,16 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   color: var(--cyan-accent);
 }
 
+/* Slightly larger text in the Technical Skills cards only. */
+#skills .card-heading-sm {
+  font-size: 1.05rem;
+}
+
+#skills .skill-chip,
+#skills .extra-small {
+  font-size: 0.825rem;
+}
+
 /* Tech Stack Cards */
 .tech-stack-card {
   background: rgba(21, 30, 50, 0.85);
@@ -614,6 +630,101 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 .project-list li {
   margin-bottom: 0.45rem;
   line-height: 1.5;
+}
+
+/* Slightly larger text in Featured Projects cards only. */
+#projects .card-heading.fs-5 {
+  font-size: 1.35rem !important;
+}
+
+#projects .card-heading.fs-6 {
+  font-size: 1.1rem !important;
+}
+
+#projects .project-list {
+  font-size: 0.925rem;
+}
+
+#projects p.small,
+#projects .badge,
+#projects .skill-chip,
+#projects .extra-small {
+  font-size: 0.825rem;
+}
+
+/* Slightly larger text in Work Experience cards only. */
+#experience .card-heading.fs-5 {
+  font-size: 1.35rem !important;
+}
+
+#experience .project-list,
+#experience .card-text {
+  font-size: 0.925rem;
+}
+
+#experience .small,
+#experience .badge {
+  font-size: 0.825rem;
+}
+
+/* Slightly larger text in Certification cards only. */
+#certifications .card-heading.fs-6 {
+  font-size: 1.2rem !important;
+}
+
+#certifications .small,
+#certifications .extra-small,
+#certifications .badge {
+  font-size: 0.9rem !important;
+}
+
+#certifications .cert-description,
+#certifications .certification-focus {
+  font-size: 0.95rem !important;
+}
+
+/* Slightly larger technology names in the Tech Stack section only. */
+#tech-stack .tech-stack-card .small {
+  font-size: 0.95rem;
+}
+
+.cert-description {
+  font-size: 0.9rem !important;
+}
+
+.certification-focus {
+  font-size: 0.9rem !important;
+}
+
+/* Slightly larger text in the Contact section only. */
+#contact .card-heading.fs-4 {
+  font-size: 1.65rem !important;
+}
+
+#contact .card-heading.fs-5 {
+  font-size: 1.35rem !important;
+}
+
+#contact .card-text.small,
+#contact .form-label.small {
+  font-size: 0.925rem;
+}
+
+#contact .info-label {
+  font-size: 0.875rem;
+}
+
+#contact .info-value,
+#contact .info-link {
+  font-size: 1.05rem;
+}
+
+#contact .form-control-custom {
+  font-size: 1.05rem;
+}
+
+#contact .btn-sm {
+  font-size: 0.95rem;
 }
 
 .cert-badge-icon {
@@ -724,7 +835,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 /* Responsive Tweaks */
 @media (max-width: 767.98px) {
   .section-title { font-size: 1.65rem !important; }
-  .hero-title-lg { font-size: 1.85rem !important; }
+  .hero-title-lg { font-size: 2.15rem !important; }
   .profile-concentric-container { width: 260px; height: 260px; }
   .profile-avatar-circle { width: 185px; height: 185px; }
   .ring-1 { width: 250px; height: 250px; }
