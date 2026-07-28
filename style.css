@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   background: rgba(0, 242, 254, 0.1);
   border: 1px solid rgba(0, 242, 254, 0.35);
   color: var(--cyan-accent);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 5px 14px;
   border-radius: 20px;
@@ -630,6 +630,14 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 .project-list li {
   margin-bottom: 0.45rem;
   line-height: 1.5;
+}
+
+.project-description-align {
+  text-align: justify;
+}
+
+.project-tech-stack {
+  font-size: 0.95rem !important;
 }
 
 /* Slightly larger text in Featured Projects cards only. */
