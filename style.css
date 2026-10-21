@@ -397,11 +397,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   border-radius: inherit;
   background:
     radial-gradient(circle, #d8fdff 0 1px, rgba(0, 242, 254, 0.85) 2px, transparent 7px) 50% 6% / 18px 18px no-repeat,
-    radial-gradient(circle, #d8fdff 0 1px, rgba(56, 189, 248, 0.8) 2px, transparent 7px) 88% 28% / 18px 18px no-repeat,
-    radial-gradient(circle, #d8fdff 0 1px, rgba(0, 242, 254, 0.8) 2px, transparent 7px) 88% 72% / 18px 18px no-repeat,
-    radial-gradient(circle, #d8fdff 0 1px, rgba(56, 189, 248, 0.8) 2px, transparent 7px) 50% 94% / 18px 18px no-repeat,
-    radial-gradient(circle, #d8fdff 0 1px, rgba(0, 242, 254, 0.8) 2px, transparent 7px) 12% 72% / 18px 18px no-repeat,
-    radial-gradient(circle, #d8fdff 0 1px, rgba(56, 189, 248, 0.8) 2px, transparent 7px) 12% 28% / 18px 18px no-repeat;
+    radial-gradient(circle, #d8fdff 0 1px, rgba(56, 189, 248, 0.8) 2px, transparent 7px) 50% 94% / 18px 18px no-repeat;
   filter: drop-shadow(0 0 4px rgba(0, 242, 254, 0.65));
   animation: ring-light-sweep 28s linear infinite;
 }
