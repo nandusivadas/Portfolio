@@ -3,7 +3,7 @@
   SCRIPT.JS - NANDU SIVADAS CLOUD & DEVOPS PORTFOLIO
   ========================================================================
   Features:
-  - Typing Animation Carousel (Focus Line: Cloud Infrastructure | Linux | DevOps Automation)
+  - Typing Animation Carousels (Hero Role and Focus Line)
   - Ambient Cloud Network Node Canvas Background Animation
   - Ultra-Smooth 3D GPU-Accelerated Scroll Reveal Observer (reveal-fade-up, reveal-slide-left, reveal-slide-right, reveal-scale-up)
   - Client-side Form Validation & Interactive Alert
@@ -14,51 +14,55 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   // ========================================================================
-  // STEP 1: TYPING ANIMATION CAROUSEL
+  // STEP 1: TYPING ANIMATION CAROUSELS
   // ========================================================================
-  const typingElement = document.getElementById('typing-text');
-  
-  const roles = [
-    "Cloud Infrastructure",
-    "Linux Administration",
-    "DevOps Automation"
-  ];
+  function startTypingAnimation(element, roles) {
+    if (!element) return;
 
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingSpeed = 100;
-  const eraseSpeed = 50;
-  const pauseTime = 1800;
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 100;
+    const eraseSpeed = 50;
+    const pauseTime = 1800;
 
-  function typeEffect() {
-    const currentRole = roles[roleIndex];
+    function typeEffect() {
+      const currentRole = roles[roleIndex];
 
-    if (isDeleting) {
-      typingElement.textContent = currentRole.substring(0, charIndex - 1);
-      charIndex--;
-    } else {
-      typingElement.textContent = currentRole.substring(0, charIndex + 1);
-      charIndex++;
+      if (isDeleting) {
+        element.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        element.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let delay = isDeleting ? eraseSpeed : typingSpeed;
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        delay = pauseTime;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        delay = 350;
+      }
+
+      setTimeout(typeEffect, delay);
     }
 
-    let delay = isDeleting ? eraseSpeed : typingSpeed;
-
-    if (!isDeleting && charIndex === currentRole.length) {
-      delay = pauseTime;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      delay = 350;
-    }
-
-    setTimeout(typeEffect, delay);
-  }
-
-  if (typingElement) {
     typeEffect();
   }
+
+  const heroRoleElement = document.getElementById('hero-role-text');
+  if (heroRoleElement) {
+    startTypingAnimation(heroRoleElement, heroRoleElement.dataset.roles.split('|'));
+  }
+  startTypingAnimation(document.getElementById('typing-text'), [
+    'Cloud Infrastructure',
+    'Linux Administration',
+    'DevOps Automation'
+  ]);
 
 
   // ========================================================================

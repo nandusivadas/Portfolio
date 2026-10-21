@@ -434,60 +434,6 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 /* ------------------------------------------------------------------------
-   STEP 6: SEAMLESS AUTO-SCROLLING TECH TICKER
-   ------------------------------------------------------------------------
-*/
-.tech-ticker-container {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-  position: relative;
-  z-index: 5;
-}
-
-.ticker-track {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.ticker-content {
-  display: flex;
-  width: max-content;
-  animation: ticker-slide 30s linear infinite;
-}
-
-.ticker-content:hover {
-  animation-play-state: paused;
-}
-
-@keyframes ticker-slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.ticker-item {
-  display: flex;
-  align-items: center;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-light);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-cyan-subtle);
-  padding: 6px 16px;
-  border-radius: 20px;
-  margin-right: 1.25rem;
-  transition: var(--transition);
-  flex-shrink: 0;
-}
-
-.ticker-item:hover {
-  background: rgba(0, 242, 254, 0.15);
-  border-color: var(--cyan-accent);
-  color: var(--cyan-accent);
-}
-
-/* ------------------------------------------------------------------------
    STEP 7: PROMINENT MAIN SECTION HEADINGS (2.15rem) & BALANCED CARD HEADINGS
    ------------------------------------------------------------------------
 */
@@ -551,58 +497,87 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   line-height: 1.6;
 }
 
-/* Technical Skills Glass Cards */
+/* Technical Skills */
 .skill-glass-card {
-  background: rgba(21, 30, 50, 0.85) !important;
-  backdrop-filter: blur(12px);
+  background: rgba(21, 30, 50, 0.58) !important;
   border: 1px solid var(--border-cyan-subtle);
-  border-radius: 14px;
-  transition: var(--transition);
-}
-
-.skill-glass-card:hover {
-  border-color: var(--cyan-accent) !important;
-  background: rgba(30, 41, 59, 0.92) !important;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 242, 254, 0.15);
-}
-
-.skill-icon-badge {
-  width: 50px;
-  height: 50px;
   border-radius: 12px;
+  padding: 1.1rem !important;
+}
+
+#skills .skill-glass-card {
+  display: block;
+  height: auto;
+}
+
+#skills .skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1rem;
+  margin: 0;
+}
+
+#skills .skills-list > .col-md-6,
+#skills .skills-column {
+  display: contents;
+}
+
+#skills .skill-category-cloud { order: 1; }
+#skills .skill-category-automation { order: 2; }
+#skills .skill-category-containers { order: 3; }
+#skills .skill-category-programming { order: 4; }
+#skills .skill-category-devops { order: 5; }
+#skills .skill-category-monitoring { order: 6; }
+#skills .skill-category-linux {
+  grid-column: 1 / -1;
+}
+
+#skills .skill-icon-badge {
   display: flex;
+  width: 40px;
+  height: 40px;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-
-.skill-chip {
-  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-cyan-subtle);
-  color: var(--text-slate);
-  font-size: 0.775rem;
-  padding: 4px 9px;
-  border-radius: 6px;
-  font-weight: 500;
-  display: inline-block;
-  transition: var(--transition);
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.8) !important;
 }
 
-.skill-chip:hover {
-  background: rgba(0, 242, 254, 0.15);
-  border-color: var(--cyan-accent);
-  color: var(--cyan-accent);
+#skills .skill-icon-badge i {
+  font-size: 1.35rem !important;
 }
 
-/* Slightly larger text in the Technical Skills cards only. */
 #skills .card-heading-sm {
-  font-size: 1.05rem;
+  color: var(--cyan-accent);
+  font-size: 0.95rem;
 }
 
-#skills .skill-chip,
-#skills .extra-small {
-  font-size: 0.825rem;
+#skills .skill-card-heading {
+  min-height: 0;
+  margin: 0 0 0.75rem !important;
+}
+
+#skills .skill-card-heading h3 {
+  line-height: 1.35;
+}
+
+#skills .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+#skills .skill-tags .skill-chip {
+  color: var(--text-slate);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 6px;
+  background: rgba(148, 163, 184, 0.07);
 }
 
 /* Tech Stack Cards */
@@ -612,6 +587,12 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   border: 1px solid var(--border-cyan-subtle);
   border-radius: 16px;
   transition: var(--transition);
+}
+
+.tech-stack-wrapper {
+  background: transparent;
+  border: 0;
+  padding: 0;
 }
 
 .tech-stack-card:hover {
@@ -683,6 +664,29 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   font-size: 0.825rem;
 }
 
+.experience-company-logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  object-fit: contain;
+  padding: 4px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.saya-company-logo {
+  width: 72px;
+  height: 72px;
+  flex-basis: 72px;
+  align-self: center;
+  background: #0d1018;
+  padding: 6px;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid var(--border-cyan-subtle);
+  border-radius: 10px;
+}
+
 /* Slightly larger text in Certification cards only. */
 #certifications .card-heading.fs-6 {
   font-size: 1.2rem !important;
@@ -697,6 +701,10 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 #certifications .cert-description,
 #certifications .certification-focus {
   font-size: 0.95rem !important;
+}
+
+#certifications .content-card {
+  min-height: 285px;
 }
 
 /* Slightly larger technology names in the Tech Stack section only. */
@@ -750,6 +758,22 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  #certifications .content-card {
+    min-height: 0;
+  }
+}
+
+.aws-certificate-logo {
+  display: block;
+  width: 58px;
+  height: 58px;
+  padding: 9px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
 }
 
 /* ------------------------------------------------------------------------
@@ -858,4 +882,9 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   .ring-2 { width: 230px; height: 230px; }
   .ring-3 { width: 210px; height: 210px; }
   .floating-pill-card { padding: 4px 10px; font-size: 0.75rem; }
+  #skills .skill-glass-card {
+    padding: 1rem !important;
+  }
+  #skills .skills-list { grid-template-columns: 1fr; }
+  #skills .skill-category-linux { grid-column: auto; }
 }
