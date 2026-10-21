@@ -560,6 +560,10 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   padding: 1.1rem !important;
 }
 
+#skills .section-subtitle {
+  font-size: 1rem;
+}
+
 #skills .skill-glass-card {
   display: block;
   height: auto;
