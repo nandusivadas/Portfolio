@@ -792,6 +792,14 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   font-size: 0.875rem;
 }
 
+#contact .info-list {
+  margin-top: 3rem;
+}
+
+#contact .info-list .info-label {
+  margin-bottom: 0.25rem;
+}
+
 #contact .info-value,
 #contact .info-link {
   font-size: 1.05rem;
@@ -861,6 +869,14 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   border-bottom: 1px solid var(--border-cyan-subtle);
   position: relative;
   z-index: 3;
+}
+
+.contact-copy {
+  text-align: justify;
+}
+
+.contact-intro {
+  text-align: justify;
 }
 
 .info-label {

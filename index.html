@@ -891,8 +891,8 @@
       <div class="section-header text-center mb-4">
         <span class="badge-accent-subtitle">GET IN TOUCH</span>
         <h2 class="section-title mt-2">LET'S CONNECT</h2>
-        <p class="section-subtitle max-w-700 mx-auto text-slate mt-2 fs-6">
-          Open to opportunities in Cloud, DevOps, and Linux Administration where I can apply my technical skills, contribute to real-world projects, and grow as an engineer.
+        <p class="section-subtitle max-w-700 mx-auto text-slate mt-2 fs-6 contact-intro">
+          I’m actively seeking entry-level opportunities in <strong>Linux System Administration, Cloud Engineering, and DevOps</strong>. I’m eager to apply my technical skills, contribute to real-world IT projects, and continue growing as an engineer.
         </p>
       </div>
 
@@ -903,10 +903,6 @@
           <div class="content-card p-4 h-100 d-flex flex-column justify-content-between">
             <div>
               <h3 class="card-heading text-white fs-4 mb-2">Connect With Me</h3>
-              <p class="card-text text-slate small mb-4">
-                I’m open to entry-level opportunities in Cloud, DevOps, and Linux Administration. Feel free to reach out via email or connect with me on LinkedIn and GitHub.
-              </p>
-
               <div class="info-list mb-4">
                 <div class="info-item mb-3">
                   <span class="info-label">LOCATION</span>
@@ -925,13 +921,16 @@
               </div>
             </div>
 
-            <div class="pt-3 border-top border-cyan-subtle d-flex gap-2">
-              <a href="https://github.com/nandusivadas" target="_blank" class="btn btn-outline-light-custom btn-sm flex-grow-1 text-center">
-                <i class="bi bi-github me-1"></i> GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/nandu-sivadas98/" target="_blank" class="btn btn-outline-light-custom btn-sm flex-grow-1 text-center">
-                <i class="bi bi-linkedin me-1 text-info"></i> LinkedIn
-              </a>
+            <div class="pt-3 border-top border-cyan-subtle">
+              <span class="info-label mb-2">SOCIAL PROFILES</span>
+              <div class="d-flex gap-2">
+                <a href="https://github.com/nandusivadas" target="_blank" class="btn btn-outline-light-custom btn-sm flex-grow-1 text-center">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/nandu-sivadas98/" target="_blank" class="btn btn-outline-light-custom btn-sm flex-grow-1 text-center">
+                  <i class="bi bi-linkedin me-1 text-info"></i> LinkedIn
+                </a>
+              </div>
             </div>
 
           </div>
@@ -942,30 +941,30 @@
           <div class="content-card p-4">
             <h3 class="card-heading text-white fs-5 mb-3">Send a Message</h3>
             
-            <div id="formAlert" class="alert alert-success d-none py-2 mb-3" role="alert">
-              <i class="bi bi-check-circle-fill me-1"></i> Thank you! Your message has been sent successfully.
+            <div id="formAlert" class="alert alert-info d-none py-2 mb-3" role="status">
+              Your email app should open with your message addressed to nandusivadas98@gmail.com. Press Send there to deliver it. If it doesn’t open, <a id="emailDraftLink" href="mailto:nandusivadas98@gmail.com" class="alert-link">open your email app</a>.
             </div>
 
             <form id="contactForm" novalidate>
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="name" class="form-label text-slate small mb-1">Your Name</label>
-                  <input type="text" class="form-control form-control-custom" id="name" placeholder="John Doe" required>
+                  <input type="text" class="form-control form-control-custom" id="name" name="name" placeholder="Enter your name" required>
                 </div>
 
                 <div class="col-md-6">
                   <label for="email" class="form-label text-slate small mb-1">Your Email</label>
-                  <input type="email" class="form-control form-control-custom" id="email" placeholder="name@example.com" required>
+                  <input type="email" class="form-control form-control-custom" id="email" name="email" placeholder="Enter your email" required>
                 </div>
 
-                <div class="col-12">
+                <div class="col-md-6">
                   <label for="subject" class="form-label text-slate small mb-1">Subject</label>
-                  <input type="text" class="form-control form-control-custom" id="subject" placeholder="DevOps / Cloud Role Inquiry" required>
+                  <input type="text" class="form-control form-control-custom" id="subject" name="subject" placeholder="Message subject" required>
                 </div>
 
                 <div class="col-12">
                   <label for="message" class="form-label text-slate small mb-1">Message</label>
-                  <textarea class="form-control form-control-custom" id="message" rows="4" placeholder="Hello Nandu, I would like to discuss an opportunity..." required></textarea>
+                  <textarea class="form-control form-control-custom" id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
                 </div>
 
                 <div class="col-12">

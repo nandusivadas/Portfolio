@@ -172,18 +172,23 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
 
       if (contactForm.checkValidity()) {
+        const formData = new FormData(contactForm);
+        const senderName = formData.get('name');
+        const senderEmail = formData.get('email');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
+        const body = `Name: ${senderName}\nEmail: ${senderEmail}\n\n${message}`;
+        const emailUrl = `mailto:nandusivadas98@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const emailDraftLink = document.getElementById('emailDraftLink');
+
+        if (emailDraftLink) {
+          emailDraftLink.href = emailUrl;
+        }
         if (formAlert) {
           formAlert.classList.remove('d-none');
         }
 
-        contactForm.reset();
-        contactForm.classList.remove('was-validated');
-
-        setTimeout(() => {
-          if (formAlert) {
-            formAlert.classList.add('d-none');
-          }
-        }, 5000);
+        window.location.href = emailUrl;
 
       } else {
         contactForm.classList.add('was-validated');
