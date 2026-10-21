@@ -338,12 +338,48 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 /* CONCENTRIC CYAN RINGS PROFILE FRAME */
 .profile-concentric-container {
   position: relative;
+  isolation: isolate;
   width: 330px;
   height: 330px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+}
+
+.profile-concentric-container::before,
+.profile-concentric-container::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 145%;
+  height: 145%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.profile-concentric-container::before {
+  background: radial-gradient(ellipse, rgba(0, 242, 254, 0.36) 0%, rgba(56, 189, 248, 0.2) 42%, transparent 76%);
+  filter: blur(22px);
+  animation: profile-spotlight-back 8s ease-in-out infinite alternate;
+}
+
+.profile-concentric-container::after {
+  background: radial-gradient(ellipse, rgba(56, 189, 248, 0.28) 0%, rgba(0, 242, 254, 0.15) 44%, transparent 76%);
+  filter: blur(20px);
+  animation: profile-spotlight-front 6s ease-in-out infinite alternate;
+}
+
+@keyframes profile-spotlight-back {
+  0% { transform: translate(calc(-50% - 22px), calc(-50% + 10px)) scale(0.9); opacity: 0.55; }
+  100% { transform: translate(calc(-50% + 22px), calc(-50% - 10px)) scale(1.08); opacity: 0.95; }
+}
+
+@keyframes profile-spotlight-front {
+  0% { transform: translate(calc(-50% + 18px), calc(-50% - 12px)) scale(1.04); opacity: 0.35; }
+  100% { transform: translate(calc(-50% - 18px), calc(-50% + 12px)) scale(0.92); opacity: 0.72; }
 }
 
 .concentric-ring {
@@ -354,9 +390,32 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   animation: ring-pulse 6s ease-in-out infinite alternate;
 }
 
+.concentric-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle, #d8fdff 0 1px, rgba(0, 242, 254, 0.85) 2px, transparent 7px) 50% 6% / 18px 18px no-repeat,
+    radial-gradient(circle, #d8fdff 0 1px, rgba(56, 189, 248, 0.8) 2px, transparent 7px) 88% 28% / 18px 18px no-repeat,
+    radial-gradient(circle, #d8fdff 0 1px, rgba(0, 242, 254, 0.8) 2px, transparent 7px) 88% 72% / 18px 18px no-repeat,
+    radial-gradient(circle, #d8fdff 0 1px, rgba(56, 189, 248, 0.8) 2px, transparent 7px) 50% 94% / 18px 18px no-repeat,
+    radial-gradient(circle, #d8fdff 0 1px, rgba(0, 242, 254, 0.8) 2px, transparent 7px) 12% 72% / 18px 18px no-repeat,
+    radial-gradient(circle, #d8fdff 0 1px, rgba(56, 189, 248, 0.8) 2px, transparent 7px) 12% 28% / 18px 18px no-repeat;
+  filter: drop-shadow(0 0 4px rgba(0, 242, 254, 0.65));
+  animation: ring-light-sweep 28s linear infinite;
+}
+
 .ring-1 { width: 320px; height: 320px; border-color: rgba(0, 242, 254, 0.15); }
 .ring-2 { width: 290px; height: 290px; border-color: rgba(56, 189, 248, 0.25); animation-delay: 1.5s; }
+.ring-2::after { animation-duration: 36s; animation-delay: -12s; }
 .ring-3 { width: 260px; height: 260px; border-color: rgba(0, 242, 254, 0.35); animation-delay: 3s; }
+.ring-3::after { animation-duration: 44s; animation-delay: -20s; }
+
+@keyframes ring-light-sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
 @keyframes ring-pulse {
   0% { transform: scale(0.98); opacity: 0.6; }
@@ -665,26 +724,21 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
 }
 
 .experience-company-logo {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
   object-fit: contain;
-  padding: 4px;
+  padding: 6px;
   border-radius: 10px;
   background: #fff;
 }
 
 .saya-company-logo {
-  width: 72px;
-  height: 72px;
-  flex-basis: 72px;
-  align-self: center;
+  width: 64px;
+  height: 64px;
+  flex-basis: 64px;
   background: #0d1018;
-  padding: 6px;
-  object-fit: contain;
-  object-position: center;
   border: 1px solid var(--border-cyan-subtle);
-  border-radius: 10px;
 }
 
 /* Slightly larger text in Certification cards only. */
@@ -887,4 +941,13 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   }
   #skills .skills-list { grid-template-columns: 1fr; }
   #skills .skill-category-linux { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-concentric-container::before,
+  .profile-concentric-container::after,
+  .concentric-ring,
+  .concentric-ring::after {
+    animation: none;
+  }
 }
