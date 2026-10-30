@@ -993,3 +993,9 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
     grid-template-columns: 1fr;
   }
 }
+
+
+#projects .project-documentation-link {
+  min-width: 12rem;
+  text-align: center;
+}
