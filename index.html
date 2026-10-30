@@ -481,43 +481,33 @@
         <p class="section-subtitle">Hands-on Linux Administration, AWS Cloud Infrastructure, and DevOps Automation Projects, with source code and technical documentation available on GitHub.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="project-grid">
         
         <!-- PROJECT #1 (MOST IMPORTANT): RHCE Capstone Project -->
-        <div class="col-lg-12">
-          <div class="content-card p-4 border-cyan-glow-card">
-            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
-              <div class="d-flex align-items-center gap-2">
-                <span class="badge bg-danger-subtle text-danger px-3 py-1-5 fw-bold"><i class="devicon-redhat-plain me-1"></i> TOP CAPSTONE PROJECT</span>
-                <span class="badge bg-accent-subtle text-cyan px-3 py-1-5">RHEL + Ansible + AWS</span>
-              </div>
-              <span class="badge bg-accent-subtle text-white px-3 py-1">Enterprise Infrastructure Automation</span>
-            </div>
+        <div class="project-col">
+          <div class="content-card p-4 h-100 d-flex flex-column">
+
+
             
             <h3 class="card-heading text-white fs-5 mb-2 mt-2">
-              RHCE Capstone Project – Automated Enterprise Linux Infrastructure Deployment using Ansible
+              RHCE Capstone Project – Automated Enterprise Linux Infrastructure Deployment
             </h3>
             
             <p class="text-cyan project-tech-stack small fw-semibold mb-3">
-              Tech Stack: Red Hat Enterprise Linux (RHEL), Ansible, AWS EC2, Apache, MariaDB, NFS File Server, HAProxy Load Balancer, Prometheus, Grafana, rsyslog, Git
+              Tech Stack: RHEL 10, Ansible, AWS EC2, Apache HTTP Server, MariaDB, NFS, HAProxy, Prometheus, Grafana, Node Exporter, rsyslog, Firewalld, SELinux, Git, GitHub
             </p>
 
             <ul class="project-list project-description-align text-slate mb-4">
-              <li>Automated enterprise Linux infrastructure across multiple AWS EC2 servers using Ansible playbooks, roles, inventories, variables, handlers, and Jinja2 templates.</li>
-              <li>Configured Apache web servers, MariaDB database, NFS file sharing, and HAProxy load balancing for a multi-server environment.</li>
-              <li>Implemented Linux security hardening using SELinux, Firewalld, SSH key-based authentication, and restricted direct root login.</li>
-              <li>Implemented server monitoring and centralized logging using Prometheus, Node Exporter, Grafana, and rsyslog.</li>
-              <li>Automated website and database backups using Ansible and scheduled recurring backups with Cron.</li>
+              <li>Automated enterprise Linux infrastructure deployment across multiple AWS EC2 instances using Ansible playbooks, roles, inventories, variables, handlers, and Jinja2 templates.</li>
+              <li>Deployed and configured Apache HTTP Server, MariaDB, NFS file sharing, and HAProxy load balancing in a multi-server environment.</li>
+              <li>Implemented Linux security hardening using SELinux, Firewalld, SSH key-based authentication, and disabled direct root SSH login.</li>
+              <li>Configured infrastructure monitoring and centralized logging using Prometheus, Node Exporter, Grafana, and rsyslog.</li>
+              <li>Automated website and database backups using Ansible, with recurring backup schedules configured through Cron.</li>
             </ul>
 
-            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top border-cyan-subtle">
-              <div class="d-flex flex-wrap gap-1">
-                <span class="skill-chip">RHEL</span>
-                <span class="skill-chip">Ansible Roles</span>
-                <span class="skill-chip">HAProxy</span>
-                <span class="skill-chip">NFS</span>
-                <span class="skill-chip">Prometheus & Grafana</span>
-              </div>
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 mt-auto border-top border-cyan-subtle">
+
+
               <div class="d-flex gap-2">
                 <a href="https://github.com/nandusivadas/RHCE-Capstone-Project.git" target="_blank" class="btn btn-outline-light-custom btn-sm px-3">
                   <i class="bi bi-github me-1"></i> GitHub Repo
@@ -532,30 +522,27 @@
         </div>
 
         <!-- PROJECT #2: WordPress Deployment -->
-        <div class="col-lg-12">
-          <div class="content-card p-4">
+        <div class="project-col">
+          <div class="content-card p-4 h-100 d-flex flex-column">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
-              <h3 class="card-heading text-white fs-5 mb-0">Automated WordPress Infrastructure Deployment using Ansible</h3>
-              <span class="badge bg-accent-subtle text-white px-3 py-1">Ansible Roles + AWS EC2</span>
+              <h3 class="card-heading text-white fs-5 mb-0">Automated WordPress Deployment with Ansible &amp; AWS</h3>
             </div>
             
             <p class="text-cyan project-tech-stack small fw-semibold mb-3">
-              Tech Stack: AWS EC2, Linux, Ansible Roles, Nginx, PHP-FPM, MariaDB, WordPress, phpMyAdmin, SFTP, Let's Encrypt SSL
+              Tech Stack: AWS EC2, Amazon Linux 2023, Ansible, Nginx, PHP-FPM, MariaDB, WordPress, phpMyAdmin, OpenSSH, SFTP, DuckDNS, Let's Encrypt, Certbot, Git, GitHub
             </p>
 
             <ul class="project-list text-slate mb-4">
-              <li>Automated end-to-end deployment of a secure LEMP-based WordPress application on AWS EC2 using reusable Ansible Playbooks and Roles.</li>
-              <li>Configured Nginx reverse proxy, PHP-FPM 8+, MariaDB, phpMyAdmin, SFTP access, and Let's Encrypt HTTPS SSL encryption.</li>
-              <li>Replaced a multi-step manual server setup with a single automated playbook run, cutting repeat-deployment time from hours to minutes.</li>
+              <li>Automated WordPress deployment on AWS EC2 using Ansible playbooks and reusable roles.</li>
+              <li>Configured Nginx, PHP-FPM, and MariaDB to build a complete WordPress hosting environment.</li>
+              <li>Automated WordPress and phpMyAdmin installation and configuration using Ansible.</li>
+              <li>Implemented secure remote file transfer using SFTP and OpenSSH.</li>
+              <li>Configured domain management using DuckDNS and enabled HTTPS using Let's Encrypt SSL certificates and Certbot.</li>
             </ul>
 
-            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top border-cyan-subtle">
-              <div class="d-flex flex-wrap gap-1">
-                <span class="skill-chip">AWS EC2</span>
-                <span class="skill-chip">Ansible Roles</span>
-                <span class="skill-chip">LEMP Stack</span>
-                <span class="skill-chip">SSL Encryption</span>
-              </div>
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 mt-auto border-top border-cyan-subtle">
+
+
               <div class="d-flex gap-2">
                 <a href="https://github.com/nandusivadas/Automated-WordPress-Deployment-with-Ansible" target="_blank" class="btn btn-outline-light-custom btn-sm px-3">
                   <i class="bi bi-github me-1"></i> GitHub Repo
@@ -570,16 +557,16 @@
         </div>
 
         <!-- PROJECT #3: AWS Infrastructure Automation -->
-        <div class="col-lg-6">
-          <div class="content-card p-4 h-100 d-flex flex-column justify-content-between">
+        <div class="project-col">
+          <div class="content-card p-4 h-100 d-flex flex-column">
             <div>
               <div class="d-flex align-items-center justify-content-between mb-2">
-                <h3 class="card-heading text-white fs-6 mb-0">AWS Infrastructure Automation using Ansible</h3>
+                <h3 class="card-heading text-white fs-5 mb-0">Multi-Region AWS Infrastructure Automation using Ansible</h3>
                 <span class="badge bg-slate-pill text-white extra-small">Multi-Region AWS</span>
               </div>
 
               <p class="text-cyan project-tech-stack small fw-semibold mb-3">
-              Tech Stack: AWS EC2, Amazon Linux, Ansible, Docker, Git, Apache, SSH
+              Tech Stack: AWS EC2, Amazon Linux 2023, Ansible Navigator, Ansible Playbooks, Ansible Roles, Docker, YAML, Apache HTTP Server, SSH, Git, GitHub
               </p>
 
               <ul class="project-list project-description-align text-slate mb-4">
@@ -607,11 +594,11 @@
         </div>
 
         <!-- PROJECT #4: Astra Linux System Recovery & Troubleshooting -->
-        <div class="col-lg-6">
-          <div class="content-card p-4 h-100 d-flex flex-column justify-content-between">
+        <div class="project-col">
+          <div class="content-card p-4 h-100 d-flex flex-column">
             <div>
               <div class="d-flex align-items-center justify-content-between mb-2">
-                <h3 class="card-heading text-white fs-6 mb-0">Astra Linux System Recovery & Troubleshooting</h3>
+                <h3 class="card-heading text-white fs-5 mb-0">Astra Linux System Recovery & Troubleshooting</h3>
                 <span class="badge bg-slate-pill text-white extra-small">Kernel Recovery</span>
               </div>
 
