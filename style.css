@@ -999,3 +999,8 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .card-heading {
   min-width: 12rem;
   text-align: center;
 }
+
+#projects .project-highlight-badge {
+  background-color: #b91c1c !important;
+  color: #ffffff !important;
+}
