@@ -162,7 +162,147 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // ========================================================================
-  // STEP 4: CONTACT FORM VALIDATION
+  // STEP 4: EXPANDABLE PROJECT SHOWCASE
+  // ========================================================================
+  const projectToggles = document.querySelectorAll('#projects .project-toggle');
+
+  projectToggles.forEach(toggle => {
+    toggle.addEventListener('click', function () {
+      const showcase = toggle.closest('.project-showcase');
+      const details = document.getElementById(toggle.getAttribute('aria-controls'));
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+
+      projectToggles.forEach(otherToggle => {
+        const otherShowcase = otherToggle.closest('.project-showcase');
+        const otherDetails = document.getElementById(otherToggle.getAttribute('aria-controls'));
+        otherToggle.setAttribute('aria-expanded', 'false');
+        otherShowcase.classList.remove('is-open');
+        if (otherDetails) otherDetails.hidden = true;
+      });
+
+      if (!isOpen) {
+        toggle.setAttribute('aria-expanded', 'true');
+        showcase.classList.add('is-open');
+        if (details) details.hidden = false;
+      }
+    });
+  });
+
+  // ========================================================================
+  // STEP 5: SAFE PORTFOLIO TERMINAL
+  // ========================================================================
+  const terminalForm = document.getElementById('terminal-form');
+  const terminalOutput = document.getElementById('terminal-output');
+  const terminalInput = document.getElementById('terminal-command');
+
+  if (terminalForm && terminalOutput && terminalInput) {
+    const commandHistory = [];
+    let historyIndex = 0;
+    const terminalProjects = [
+      '1. RHCE Capstone         -> Enterprise Linux + Ansible + AWS',
+      '2. WordPress Deployment  -> Ansible + Nginx + PHP + MariaDB',
+      '3. Multi-Region AWS      -> Ansible automation + disaster recovery',
+      '4. Astra Linux Recovery -> GRUB + initramfs troubleshooting'
+    ];
+
+    function addTerminalLine(text, className) {
+      const line = document.createElement('p');
+      if (className) line.className = className;
+      line.textContent = text;
+      terminalOutput.appendChild(line);
+    }
+
+    function runTerminalCommand(rawCommand) {
+      const command = rawCommand.trim().toLowerCase().replace(/\s+/g, ' ');
+      if (!command) return;
+
+      addTerminalLine(`nandu@cloud:~$ ${rawCommand.trim()}`, 'terminal-command-line');
+
+      switch (command) {
+        case 'help':
+          addTerminalLine('Available commands:');
+          addTerminalLine('  about         — About Nandu');
+          addTerminalLine('  skills        — Linux, AWS, Ansible, containers, and monitoring');
+          addTerminalLine('  projects      — View featured projects');
+          addTerminalLine('  aws           — AWS services and infrastructure experience');
+          addTerminalLine('  sudo hire-me  — Get in touch');
+          addTerminalLine('  clear         — Clear the terminal');
+          break;
+        case 'about':
+          addTerminalLine('Nandu Sivadas — Cloud & DevOps professional.');
+          addTerminalLine('RHCSA-certified, with hands-on experience in Linux administration, AWS, and infrastructure automation.');
+          break;
+        case 'skills':
+          addTerminalLine('Linux: RHEL, system administration, SELinux, systemd');
+          addTerminalLine('Cloud & IaC: AWS (EC2, VPC, IAM, Route 53), Ansible, Terraform');
+          addTerminalLine('Containers & reliability: Docker, Prometheus, Grafana');
+          addTerminalLine('Scripting & DevOps: Python, Bash, Git, CI/CD fundamentals');
+          break;
+        case 'projects':
+          terminalProjects.forEach(project => addTerminalLine(project));
+          break;
+        case 'aws':
+          addTerminalLine('AWS experience: EC2, VPC, IAM, ALB, Route 53, and multi-region infrastructure.');
+          addTerminalLine('Automation with Ansible; project work includes repeatable deployments and disaster recovery.');
+          break;
+        case 'sudo hire-me': {
+          addTerminalLine('Access granted (simulated). Let’s talk:');
+          const contactLink = document.createElement('a');
+          contactLink.href = 'mailto:nandusivadas98@gmail.com?subject=Portfolio%20inquiry';
+          contactLink.className = 'terminal-email-link';
+          contactLink.textContent = 'Email Nandu';
+          terminalOutput.appendChild(contactLink);
+          break;
+        }
+        case 'clear':
+          terminalOutput.replaceChildren();
+          break;
+        default:
+          addTerminalLine(`command not found: ${command}. Type "help" to see available commands.`, 'terminal-error');
+      }
+
+      terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    }
+
+    terminalForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const command = terminalInput.value;
+      if (!command.trim()) return;
+
+      if (command.trim().toLowerCase() !== 'clear') {
+        commandHistory.push(command);
+      }
+      historyIndex = commandHistory.length;
+      runTerminalCommand(command);
+      terminalInput.value = '';
+      terminalInput.focus();
+    });
+
+    terminalInput.addEventListener('keydown', event => {
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        if (historyIndex > 0) historyIndex--;
+        terminalInput.value = commandHistory[historyIndex] || '';
+      } else if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        if (historyIndex < commandHistory.length) historyIndex++;
+        terminalInput.value = commandHistory[historyIndex] || '';
+      }
+    });
+
+    document.querySelectorAll('[data-terminal-command]').forEach(button => {
+      button.addEventListener('click', () => {
+        const command = button.getAttribute('data-terminal-command');
+        terminalInput.value = command;
+        terminalForm.requestSubmit();
+        terminalInput.focus();
+      });
+    });
+  }
+
+
+  // ========================================================================
+  // STEP 6: CONTACT FORM VALIDATION
   // ========================================================================
   const contactForm = document.getElementById('contactForm');
   const formAlert = document.getElementById('formAlert');

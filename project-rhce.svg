@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#17345d"/></linearGradient></defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <circle cx="1080" cy="50" r="130" fill="#38bdf8" opacity=".1"/>
+  <path d="M0 300L1200 210V360H0Z" fill="#061225" opacity=".55"/>
+  <text x="54" y="65" fill="#ef4444" font-family="Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="4">ENTERPRISE LINUX AUTOMATION</text>
+  <text x="50" y="152" fill="#fff" font-family="Arial,sans-serif" font-size="72" font-weight="800">RHCE</text>
+  <text x="54" y="205" fill="#fff" font-family="Arial,sans-serif" font-size="39" font-weight="800">CAPSTONE PROJECT</text>
+  <text x="55" y="252" fill="#ffb45e" font-family="Arial,sans-serif" font-size="22" font-weight="700">RHEL  •  ANSIBLE  •  AWS</text>
+  <g transform="translate(620 42)">
+    <rect x="150" y="0" width="260" height="55" rx="10" fill="#0d2038" stroke="#38bdf8" stroke-width="2"/>
+    <text x="280" y="35" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">ANSIBLE CONTROL</text>
+    <path d="M280 55V95M280 95H70M280 95H490" fill="none" stroke="#38bdf8" stroke-width="3"/>
+    <g fill="#10284a" stroke="#38bdf8" stroke-width="2">
+      <rect x="0" y="95" width="140" height="80" rx="10"/><rect x="210" y="95" width="140" height="80" rx="10"/><rect x="420" y="95" width="140" height="80" rx="10"/>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700">
+      <text x="70" y="140">APACHE</text><text x="280" y="140">HAPROXY</text><text x="490" y="140">MARIADB / NFS</text>
+    </g>
+    <text x="280" y="220" text-anchor="middle" fill="#91b4d8" font-family="Arial,sans-serif" font-size="16">MONITORING  •  LOGGING  •  BACKUPS</text>
+  </g>
+</svg>

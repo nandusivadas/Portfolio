@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081629"/><stop offset="1" stop-color="#18345a"/></linearGradient></defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <circle cx="1090" cy="30" r="135" fill="#38bdf8" opacity=".09"/>
+  <path d="M0 310L1200 235V360H0Z" fill="#061225" opacity=".6"/>
+  <text x="54" y="60" fill="#ef4444" font-family="Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="4">SYSTEM RECOVERY</text>
+  <text x="50" y="148" fill="#fff" font-family="Arial,sans-serif" font-size="68" font-weight="800">ASTRA LINUX</text>
+  <text x="55" y="203" fill="#ffb45e" font-family="Arial,sans-serif" font-size="22" font-weight="700">GRUB2  •  INITRAMFS  •  BOOT RECOVERY</text>
+  <text x="55" y="249" fill="#a9c1dd" font-family="Arial,sans-serif" font-size="18">Root-cause analysis and system restoration</text>
+  <g transform="translate(650 35)">
+    <rect x="0" y="0" width="500" height="275" rx="15" fill="#0a1a30" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="20" y="20" width="460" height="235" rx="8" fill="#050b14"/>
+    <circle cx="40" cy="40" r="6" fill="#ef4444"/><circle cx="60" cy="40" r="6" fill="#f59e0b"/><circle cx="80" cy="40" r="6" fill="#22c55e"/>
+    <g fill="#9be7ff" font-family="monospace" font-size="17">
+      <text x="45" y="89">grub rescue&gt; ls</text>
+      <text x="45" y="128">(hd0,gpt2)/</text>
+      <text x="45" y="167">set root=(hd0,gpt2)</text>
+      <text x="45" y="206">linux /vmlinuz root=/dev/sda2</text>
+      <text x="45" y="239">initrd /initramfs.img</text>
+    </g>
+  </g>
+</svg>

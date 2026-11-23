@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071527"/><stop offset="1" stop-color="#162c53"/></linearGradient></defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <circle cx="1080" cy="30" r="140" fill="#287bd1" opacity=".13"/>
+  <path d="M0 315L1200 235V360H0Z" fill="#061225" opacity=".62"/>
+  <text x="54" y="58" fill="#ff9d3b" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="3">MULTI-REGION INFRASTRUCTURE</text>
+  <text x="50" y="143" fill="#fff" font-family="Arial,sans-serif" font-size="66" font-weight="800">AWS</text>
+  <text x="54" y="203" fill="#fff" font-family="Arial,sans-serif" font-size="42" font-weight="800">ANSIBLE AUTOMATION</text>
+  <text x="55" y="250" fill="#a9c1dd" font-family="Arial,sans-serif" font-size="18">Provision  •  Configure  •  Recover</text>
+  <g transform="translate(565 30)">
+    <rect x="174" y="0" width="252" height="48" rx="10" fill="#0c203c" stroke="#4ab7ff" stroke-width="2"/>
+    <text x="300" y="31" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="17" font-weight="700">ANSIBLE CONTROL</text>
+    <path d="M300 48V80M300 80H105M300 80H495" fill="none" stroke="#4ab7ff" stroke-width="3"/>
+    <rect x="0" y="80" width="245" height="206" rx="12" fill="#0b1d36" stroke="#7c6cff" stroke-width="2"/>
+    <rect x="355" y="80" width="245" height="206" rx="12" fill="#0b1d36" stroke="#32d583" stroke-width="2"/>
+    <text x="122" y="111" text-anchor="middle" fill="#b5aaff" font-family="Arial,sans-serif" font-size="17" font-weight="700">MUMBAI REGION</text>
+    <text x="477" y="111" text-anchor="middle" fill="#7cf0ad" font-family="Arial,sans-serif" font-size="17" font-weight="700">HYDERABAD REGION</text>
+    <g fill="#122d50" stroke="#547ba9">
+      <rect x="28" y="130" width="189" height="57" rx="8"/><rect x="28" y="205" width="189" height="57" rx="8"/>
+      <rect x="383" y="130" width="189" height="57" rx="8"/><rect x="383" y="205" width="189" height="57" rx="8"/>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700">
+      <text x="122" y="165">EC2  •  WEB NODE</text><text x="122" y="240">EC2  •  WEB NODE</text>
+      <text x="477" y="165">EC2  •  WEB NODE</text><text x="477" y="240">EC2  •  WEB NODE</text>
+    </g>
+    <path d="M300 80V303" stroke="#4ab7ff" stroke-width="2" stroke-dasharray="6 6"/>
+  </g>
+</svg>

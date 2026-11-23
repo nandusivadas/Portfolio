@@ -70,6 +70,7 @@
           <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Technical Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#languages">Languages</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
@@ -78,7 +79,7 @@
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           
           <!-- Electric Cyan 'Hire Me' CTA Button -->
-          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0 text-nowrap flex-shrink-0">
             <a href="#contact" class="btn btn-hire-me-cyan">
               Hire Me
             </a>
@@ -288,7 +289,46 @@
 
 
   <!-- ========================================================================
-       STEP 5: TECHNICAL SKILLS SECTION
+       STEP 5: LANGUAGES SECTION
+       ======================================================================== -->
+  <section id="languages" class="pt-5 pb-3 reveal-fade-up">
+    <div class="container py-2">
+      <div class="section-header text-center mb-4">
+        <h2 class="section-title">LANGUAGES</h2>
+      </div>
+
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="content-card language-card p-3 text-center h-100">
+            <h3 class="card-heading text-white fs-5 mb-1">English</h3>
+            <span class="text-cyan language-level fw-semibold">Fluent</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="content-card language-card p-3 text-center h-100">
+            <h3 class="card-heading text-white fs-5 mb-1">Malayalam</h3>
+            <span class="text-cyan small fw-semibold">Native</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="content-card language-card p-3 text-center h-100">
+            <h3 class="card-heading text-white fs-5 mb-1">Hindi</h3>
+            <span class="text-cyan small fw-semibold">Basic / Conversational</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="content-card language-card p-3 text-center h-100">
+            <h3 class="card-heading text-white fs-5 mb-1">Tamil</h3>
+            <span class="text-cyan small fw-semibold">Basic / Conversational</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       STEP 6: TECHNICAL SKILLS SECTION
        ======================================================================== -->
   <section id="skills" class="pt-5 pb-3 reveal-scale-up">
     <div class="container py-2">
@@ -299,170 +339,169 @@
         <p class="section-subtitle">Core competencies in <span class="text-cyan fw-semibold">Linux system administration, AWS cloud infrastructure, automation, and DevOps technologies</span>.</p>
       </div>
 
-      <!-- Linux administration is the primary skill area. -->
-      <div class="row g-4 skills-list">
-      <div class="content-card skill-glass-card skill-category-linux p-4">
-        <div class="skill-card-heading d-flex align-items-center gap-3 mb-3">
-          <div class="skill-icon-badge bg-dark-pill"><i class="devicon-redhat-plain colored fs-3"></i></div>
-          <h3 class="card-heading-sm mb-0 text-white">Linux System Administration</h3>
+      <div class="skill-summary-grid">
+        <div class="skill-summary-card">
+          <div class="skill-summary-icon"><i class="devicon-redhat-plain colored"></i></div>
+          <div>
+            <h3>RHCSA Certified</h3>
+            <p>RHEL · SELinux · Systemd</p>
+          </div>
         </div>
-        <div class="skill-tags skill-tags-primary">
-          <span class="skill-chip">Red Hat Enterprise Linux (RHEL 7–10)</span>
-          <span class="skill-chip">Linux System Administration</span>
-          <span class="skill-chip">Command-Line Operations</span>
-          <span class="skill-chip">Linux Troubleshooting</span>
-          <span class="skill-chip">User &amp; Group Management</span>
-          <span class="skill-chip">File Permissions &amp; Access Control</span>
-          <span class="skill-chip">Process &amp; Service Management</span>
-          <span class="skill-chip">System Logs &amp; Troubleshooting</span>
-          <span class="skill-chip">SSH Configuration &amp; Security</span>
-          <span class="skill-chip">Network Configuration</span>
-          <span class="skill-chip">Disk &amp; File System Management</span>
-          <span class="skill-chip">LVM &amp; Swap</span>
-          <span class="skill-chip">SELinux</span>
-          <span class="skill-chip">Firewalld</span>
-          <span class="skill-chip">NFS &amp; Autofs</span>
-          <span class="skill-chip">Software &amp; Package Management (RPM, YUM, DNF)</span>
-          <span class="skill-chip">Systemd</span>
-          <span class="skill-chip">Cron Job Scheduling</span>
-          <span class="skill-chip">System Performance Tuning</span>
-          <span class="skill-chip">Boot Process Management</span>
-          <span class="skill-chip">Linux Containers</span>
+        <div class="skill-summary-card">
+          <div class="skill-summary-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+          <div>
+            <h3>AWS Cloud</h3>
+            <p>EC2 · VPC · IAM · Route 53</p>
+          </div>
+        </div>
+        <div class="skill-summary-card">
+          <div class="skill-summary-icon"><i class="devicon-ansible-plain text-cyan"></i></div>
+          <div>
+            <h3>Automation &amp; IaC</h3>
+            <p>Ansible · Terraform · Jinja2</p>
+          </div>
+        </div>
+        <div class="skill-summary-card">
+          <div class="skill-summary-icon"><i class="devicon-docker-plain colored"></i></div>
+          <div>
+            <h3>Containers &amp; Monitoring</h3>
+            <p>Docker · Prometheus · Grafana</p>
+          </div>
         </div>
       </div>
 
+      <div class="row g-4 skills-list">
+        <details class="content-card skill-glass-card skill-accordion skill-category-linux">
+          <summary class="skill-card-heading d-flex align-items-center gap-3">
+            <div class="skill-icon-badge bg-dark-pill"><i class="devicon-redhat-plain colored fs-3"></i></div>
+            <h3 class="card-heading-sm mb-0 text-white">Linux System Administration</h3>
+          </summary>
+          <div class="skill-tags skill-tags-primary">
+            <span class="skill-chip">Red Hat Enterprise Linux (RHEL 7–10)</span>
+            <span class="skill-chip">Linux System Administration</span>
+            <span class="skill-chip">Command-Line Operations</span>
+            <span class="skill-chip">Linux Troubleshooting</span>
+            <span class="skill-chip">User &amp; Group Management</span>
+            <span class="skill-chip">File Permissions &amp; Access Control</span>
+            <span class="skill-chip">Process &amp; Service Management</span>
+            <span class="skill-chip">System Logs &amp; Troubleshooting</span>
+            <span class="skill-chip">SSH Configuration &amp; Security</span>
+            <span class="skill-chip">Network Configuration</span>
+            <span class="skill-chip">Disk &amp; File System Management</span>
+            <span class="skill-chip">LVM &amp; Swap</span>
+            <span class="skill-chip">SELinux</span>
+            <span class="skill-chip">Firewalld</span>
+            <span class="skill-chip">NFS &amp; Autofs</span>
+            <span class="skill-chip">Software &amp; Package Management (RPM, YUM, DNF)</span>
+            <span class="skill-chip">Systemd</span>
+            <span class="skill-chip">Cron Job Scheduling</span>
+            <span class="skill-chip">System Performance Tuning</span>
+            <span class="skill-chip">Boot Process Management</span>
+            <span class="skill-chip">Linux Containers</span>
+            <span class="skill-chip">cPanel</span>
+            <span class="skill-chip">WHM (Web Host Manager)</span>
+            <span class="skill-chip">cPanel Account Management</span>
+            <span class="skill-chip">Web Hosting Administration</span>
+        </div>
+        </details>
+
         <div class="col-md-6">
           <div class="skills-column">
-            <!-- Configuration management and automation -->
-            <div class="content-card skill-glass-card skill-category-automation p-4">
-              <div class="skill-card-heading d-flex align-items-center gap-3 mb-3">
+            <details class="content-card skill-glass-card skill-accordion skill-category-automation">
+              <summary class="skill-card-heading d-flex align-items-center gap-3">
                 <div class="skill-icon-badge bg-dark-pill"><i class="devicon-ansible-plain text-cyan fs-3"></i></div>
                 <h3 class="card-heading-sm mb-0 text-white">Configuration Management &amp; Automation</h3>
-              </div>
+              </summary>
               <div class="skill-tags">
-                <span class="skill-chip">Ansible</span>
-                <span class="skill-chip">Ansible Playbooks</span>
-                <span class="skill-chip">Variables &amp; Facts</span>
-                <span class="skill-chip">Task Control</span>
-                <span class="skill-chip">Ansible Roles</span>
-                <span class="skill-chip">Jinja2 Templates</span>
-                <span class="skill-chip">Ansible Vault</span>
-                <span class="skill-chip">Managed Host Configuration</span>
-                <span class="skill-chip">Linux Administration Automation</span>
-                <span class="skill-chip">Terraform</span>
+                <span class="skill-chip">Ansible</span><span class="skill-chip">Ansible Playbooks</span>
+                <span class="skill-chip">Variables &amp; Facts</span><span class="skill-chip">Task Control</span>
+                <span class="skill-chip">Ansible Roles</span><span class="skill-chip">Jinja2 Templates</span>
+                <span class="skill-chip">Ansible Vault</span><span class="skill-chip">Managed Host Configuration</span>
+                <span class="skill-chip">Linux Administration Automation</span><span class="skill-chip">Terraform</span>
                 <span class="skill-chip">Infrastructure as Code (IaC)</span>
               </div>
-            </div>
+            </details>
 
-            <!-- Programming and scripting -->
-            <div class="content-card skill-glass-card skill-category-programming p-4">
-              <div class="skill-card-heading d-flex align-items-center gap-3 mb-3">
+            <details class="content-card skill-glass-card skill-accordion skill-category-programming">
+              <summary class="skill-card-heading d-flex align-items-center gap-3">
                 <div class="skill-icon-badge bg-dark-pill"><i class="devicon-python-plain colored fs-3"></i></div>
                 <h3 class="card-heading-sm mb-0 text-white">Programming &amp; Scripting</h3>
-              </div>
+              </summary>
               <div class="skill-tags">
-                <span class="skill-chip">Python</span>
-                <span class="skill-chip">Variables &amp; Data Types</span>
-                <span class="skill-chip">Conditional Statements &amp; Loops</span>
-                <span class="skill-chip">Functions</span>
+                <span class="skill-chip">Python</span><span class="skill-chip">Variables &amp; Data Types</span>
+                <span class="skill-chip">Conditional Statements &amp; Loops</span><span class="skill-chip">Functions</span>
                 <span class="skill-chip">Lists, Tuples, Dictionaries &amp; Sets</span>
-                <span class="skill-chip">Object-Oriented Programming (OOP)</span>
-                <span class="skill-chip">Exception Handling</span>
-                <span class="skill-chip">File Handling</span>
-                <span class="skill-chip">Python Libraries &amp; pip</span>
+                <span class="skill-chip">Object-Oriented Programming (OOP)</span><span class="skill-chip">Exception Handling</span>
+                <span class="skill-chip">File Handling</span><span class="skill-chip">Python Libraries &amp; pip</span>
               </div>
-            </div>
+            </details>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="skills-column">
-            <!-- Cloud infrastructure and networking -->
-            <div class="content-card skill-glass-card skill-category-cloud p-4">
-              <div class="skill-card-heading d-flex align-items-center gap-3 mb-3">
+            <details class="content-card skill-glass-card skill-accordion skill-category-cloud">
+              <summary class="skill-card-heading d-flex align-items-center gap-3">
                 <div class="skill-icon-badge bg-dark-pill"><i class="devicon-amazonwebservices-plain-wordmark colored fs-3"></i></div>
                 <h3 class="card-heading-sm mb-0 text-white">Cloud Infrastructure &amp; Networking</h3>
-              </div>
+              </summary>
               <div class="skill-tags">
-                <span class="skill-chip">Amazon Web Services (AWS)</span>
-                <span class="skill-chip">EC2</span>
-                <span class="skill-chip">IAM</span>
-                <span class="skill-chip">VPC &amp; VPC Peering</span>
-                <span class="skill-chip">S3</span>
-                <span class="skill-chip">EBS</span>
-                <span class="skill-chip">EFS</span>
-                <span class="skill-chip">RDS</span>
-                <span class="skill-chip">Route 53</span>
-                <span class="skill-chip">Elastic IP</span>
-                <span class="skill-chip">ALB/NLB</span>
-                <span class="skill-chip">NAT Gateway</span>
-                <span class="skill-chip">Auto Scaling</span>
-                <span class="skill-chip">AWS Lambda</span>
-                <span class="skill-chip">Amazon ECS</span>
-                <span class="skill-chip">SNS</span>
-                <span class="skill-chip">AMI &amp; Snapshots</span>
-                <span class="skill-chip">AWS CLI</span>
+                <span class="skill-chip">Amazon Web Services (AWS)</span><span class="skill-chip">EC2</span>
+                <span class="skill-chip">IAM</span><span class="skill-chip">VPC &amp; VPC Peering</span>
+                <span class="skill-chip">S3</span><span class="skill-chip">EBS</span><span class="skill-chip">EFS</span>
+                <span class="skill-chip">RDS</span><span class="skill-chip">Route 53</span><span class="skill-chip">Elastic IP</span>
+                <span class="skill-chip">ALB/NLB</span><span class="skill-chip">NAT Gateway</span>
+                <span class="skill-chip">Auto Scaling</span><span class="skill-chip">AWS Lambda</span>
+                <span class="skill-chip">Amazon ECS</span><span class="skill-chip">SNS</span>
+                <span class="skill-chip">AMI &amp; Snapshots</span><span class="skill-chip">AWS CLI</span>
                 <span class="skill-chip">EC2 Configuration &amp; SSH Access</span>
               </div>
-            </div>
+            </details>
 
-            <!-- Containers and application deployment -->
-            <div class="content-card skill-glass-card skill-category-containers p-4">
-              <div class="skill-card-heading d-flex align-items-center gap-3 mb-3">
+            <details class="content-card skill-glass-card skill-accordion skill-category-containers">
+              <summary class="skill-card-heading d-flex align-items-center gap-3">
                 <div class="skill-icon-badge bg-dark-pill"><i class="devicon-docker-plain colored fs-3"></i></div>
                 <h3 class="card-heading-sm mb-0 text-white">Containers &amp; Application Deployment</h3>
-              </div>
+              </summary>
               <div class="skill-tags">
-                <span class="skill-chip">Docker</span>
-                <span class="skill-chip">Docker Images &amp; Containers</span>
-                <span class="skill-chip">Dockerfile</span>
-                <span class="skill-chip">Custom Image Creation</span>
-                <span class="skill-chip">Docker Networking</span>
-                <span class="skill-chip">Volumes &amp; Bind Mounts</span>
-                <span class="skill-chip">Port Mapping</span>
-                <span class="skill-chip">Environment Variables</span>
-                <span class="skill-chip">Docker Compose</span>
-                <span class="skill-chip">Multi-Container Applications</span>
-              </div>
+                <span class="skill-chip">Docker</span><span class="skill-chip">Docker Images &amp; Containers</span>
+                <span class="skill-chip">Dockerfile</span><span class="skill-chip">Custom Image Creation</span>
+                <span class="skill-chip">Docker Networking</span><span class="skill-chip">Volumes &amp; Bind Mounts</span>
+                <span class="skill-chip">Port Mapping</span><span class="skill-chip">Environment Variables</span>
+                <span class="skill-chip">Docker Compose</span><span class="skill-chip">Multi-Container Applications</span>
             </div>
-
+            </details>
           </div>
         </div>
 
         <div class="col-md-6">
-          <div class="content-card skill-glass-card skill-category-devops p-4">
-            <div class="skill-card-heading d-flex align-items-center gap-3 mb-3">
+          <details class="content-card skill-glass-card skill-accordion skill-category-devops">
+            <summary class="skill-card-heading d-flex align-items-center gap-3">
               <div class="skill-icon-badge bg-dark-pill"><i class="devicon-jenkins-line colored fs-3"></i></div>
               <h3 class="card-heading-sm mb-0 text-white">DevOps &amp; Build Automation</h3>
-            </div>
+            </summary>
             <div class="skill-tags">
-              <span class="skill-chip">Git</span>
-              <span class="skill-chip">GitHub</span>
-              <span class="skill-chip">Jenkins</span>
-              <span class="skill-chip">CI/CD Pipelines</span>
-              <span class="skill-chip">Apache Maven</span>
-              <span class="skill-chip">Build Lifecycle &amp; Dependency Management</span>
-              <span class="skill-chip">YAML</span>
+              <span class="skill-chip">Git</span><span class="skill-chip">GitHub</span><span class="skill-chip">Jenkins</span>
+              <span class="skill-chip">CI/CD Pipelines</span><span class="skill-chip">Apache Maven</span>
+              <span class="skill-chip">Build Lifecycle &amp; Dependency Management</span><span class="skill-chip">YAML</span>
               <span class="skill-chip">DevOps Fundamentals</span>
-            </div>
           </div>
+          </details>
         </div>
 
         <div class="col-md-6">
-          <div class="content-card skill-glass-card skill-category-monitoring p-4">
-            <div class="skill-card-heading d-flex align-items-center gap-3 mb-3">
+          <details class="content-card skill-glass-card skill-accordion skill-category-monitoring">
+            <summary class="skill-card-heading d-flex align-items-center gap-3">
               <div class="skill-icon-badge bg-dark-pill"><i class="devicon-prometheus-original colored fs-3"></i></div>
               <h3 class="card-heading-sm mb-0 text-white">Monitoring &amp; System Reliability</h3>
-            </div>
+            </summary>
             <div class="skill-tags">
-              <span class="skill-chip">Prometheus</span>
-              <span class="skill-chip">Grafana</span>
-              <span class="skill-chip">Metrics Collection</span>
-              <span class="skill-chip">Monitoring Dashboards</span>
+              <span class="skill-chip">Prometheus</span><span class="skill-chip">Grafana</span>
+              <span class="skill-chip">Metrics Collection</span><span class="skill-chip">Monitoring Dashboards</span>
               <span class="skill-chip">Alerting Fundamentals</span>
               <span class="skill-chip">System Monitoring &amp; Troubleshooting</span>
-            </div>
           </div>
+          </details>
         </div>
       </div>
     </div>
@@ -481,7 +520,128 @@
         <p class="section-subtitle">Hands-on Linux Administration, AWS Cloud Infrastructure, and DevOps Automation Projects, with source code and technical documentation available on GitHub.</p>
       </div>
 
-      <div class="project-grid">
+      <div class="project-showcase-list">
+        <article class="project-showcase">
+          <div class="project-cover">
+            <img src="./project-rhce.svg" alt="RHCE enterprise Linux Ansible automation project architecture">
+          </div>
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-1">
+            <span class="project-index">01</span>
+            <span class="project-heading">
+              <span class="project-name">RHCE Capstone Project – Automated Enterprise Linux Infrastructure</span>
+              <span class="project-kicker">Enterprise Linux Automation &amp; Infrastructure Management</span>
+              <span class="project-summary">Designed and provisioned a multi-node RHEL environment on AWS EC2 using reusable Ansible automation.</span>
+            </span>
+            <span class="project-icon" aria-hidden="true"><i class="bi bi-server"></i></span>
+            <span class="project-arrow" aria-hidden="true"><i class="bi bi-chevron-down"></i></span>
+          </button>
+          <div class="project-details" id="project-details-1" hidden>
+            <div class="project-tags project-full-tags"><span>RHEL</span><span>Ansible</span><span>AWS EC2</span><span>Apache</span><span>MariaDB</span><span>HAProxy</span><span>Prometheus</span><span>Grafana</span></div>
+            <div class="project-reference-section">
+              <h4><i class="bi bi-journal-text"></i> Full Case Study</h4>
+              <p>Engineered a complete enterprise Linux infrastructure across multiple AWS EC2 instances using Ansible inventory, playbooks, roles, variables, handlers and Jinja2 templates. Deployed Apache, MariaDB, NFS, HAProxy and central monitoring while applying SELinux, Firewalld and SSH security controls.</p>
+            </div>
+            <div class="project-reference-section">
+              <h4><i class="bi bi-stack"></i> Full Tech Stack</h4>
+              <div class="project-tags"><span>RHEL 10</span><span>Ansible</span><span>AWS EC2</span><span>Apache</span><span>MariaDB</span><span>NFS</span><span>HAProxy</span><span>Prometheus</span><span>Grafana</span><span>Node Exporter</span><span>rsyslog</span><span>SELinux</span></div>
+            </div>
+            <div class="project-reference-section">
+              <h4><i class="bi bi-exclamation-triangle"></i> Challenges</h4>
+              <ul class="project-list"><li>Coordinating configuration across multiple managed RHEL servers.</li><li>Hardening services without disrupting application availability.</li><li>Building consistent monitoring and centralized logging.</li></ul>
+            </div>
+            <div class="project-reference-section">
+              <h4><i class="bi bi-lightbulb"></i> Lessons Learned</h4>
+              <ul class="project-list"><li>Reusable roles improve repeatability and reduce configuration drift.</li><li>Inventory variables and Jinja2 templates simplify environment changes.</li><li>Automation, monitoring and security must be implemented together.</li></ul>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/nandusivadas/RHCE-Capstone-Project.git" target="_blank" rel="noopener" class="btn btn-outline-light-custom btn-sm"><i class="bi bi-github me-1"></i>GitHub Repo</a>
+              <a href="./RHCE_Capstone_Project_Documentation.pdf" target="_blank" class="btn btn-accent btn-sm"><i class="bi bi-file-earmark-pdf-fill me-1"></i>Documentation</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-showcase">
+          <div class="project-cover">
+            <img src="./project-wordpress.svg" alt="WordPress hosting stack on AWS automated with Ansible">
+          </div>
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-2">
+            <span class="project-index">02</span>
+            <span class="project-heading">
+              <span class="project-name">Automated WordPress Deployment with Ansible &amp; AWS</span>
+              <span class="project-kicker">WordPress Hosting Automation &amp; Secure Deployment</span>
+              <span class="project-summary">Automated a complete WordPress environment on AWS EC2 with Ansible and HTTPS.</span>
+            </span>
+            <span class="project-icon" aria-hidden="true"><i class="bi bi-wordpress"></i></span>
+            <span class="project-arrow" aria-hidden="true"><i class="bi bi-chevron-down"></i></span>
+          </button>
+          <div class="project-details" id="project-details-2" hidden>
+            <div class="project-tags project-full-tags"><span>AWS EC2</span><span>Ansible</span><span>Nginx</span><span>PHP-FPM</span><span>MariaDB</span><span>WordPress</span><span>Let's Encrypt</span></div>
+            <div class="project-reference-section"><h4><i class="bi bi-journal-text"></i> Full Case Study</h4><p>Provisioned Amazon Linux 2023 on AWS EC2 and automated the WordPress, Nginx, PHP-FPM and MariaDB stack using Ansible roles. Added phpMyAdmin administration, SFTP access, DuckDNS domain mapping and Certbot SSL certificates for secure HTTPS delivery.</p></div>
+            <div class="project-reference-section"><h4><i class="bi bi-stack"></i> Full Tech Stack</h4><div class="project-tags"><span>AWS EC2</span><span>Amazon Linux 2023</span><span>Ansible</span><span>Nginx</span><span>PHP-FPM</span><span>MariaDB</span><span>WordPress</span><span>phpMyAdmin</span><span>SFTP</span><span>DuckDNS</span><span>Certbot</span><span>Let's Encrypt</span></div></div>
+            <div class="project-reference-section"><h4><i class="bi bi-exclamation-triangle"></i> Challenges</h4><ul class="project-list"><li>Synchronizing web-server, PHP and database configuration.</li><li>Managing secure remote access and file transfer.</li><li>Completing domain and SSL configuration reliably.</li></ul></div>
+            <div class="project-reference-section"><h4><i class="bi bi-lightbulb"></i> Lessons Learned</h4><ul class="project-list"><li>Ansible roles make application stacks portable and repeatable.</li><li>HTTPS and restricted SSH access are essential for public hosting.</li><li>Verification after every deployment stage reduces troubleshooting time.</li></ul></div>
+            <div class="project-actions">
+              <a href="https://github.com/nandusivadas/Automated-WordPress-Deployment-with-Ansible" target="_blank" rel="noopener" class="btn btn-outline-light-custom btn-sm"><i class="bi bi-github me-1"></i>GitHub Repo</a>
+              <a href="./WordPress_Ansible_Documentation.pdf" target="_blank" class="btn btn-accent btn-sm"><i class="bi bi-file-earmark-pdf-fill me-1"></i>Documentation</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-showcase">
+          <div class="project-cover">
+            <img src="./project-multi-region.svg" alt="Ansible-managed AWS infrastructure replicated in Mumbai and Hyderabad">
+          </div>
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-3">
+            <span class="project-index">03</span>
+            <span class="project-heading">
+              <span class="project-name">Multi-Region AWS Infrastructure Automation using Ansible</span>
+              <span class="project-kicker">Multi-Region AWS &amp; Disaster Recovery Automation</span>
+              <span class="project-summary">Recreated and validated AWS infrastructure across Mumbai and Hyderabad regions using Ansible.</span>
+            </span>
+            <span class="project-icon" aria-hidden="true"><i class="bi bi-clouds"></i></span>
+            <span class="project-arrow" aria-hidden="true"><i class="bi bi-chevron-down"></i></span>
+          </button>
+          <div class="project-details" id="project-details-3" hidden>
+            <div class="project-tags project-full-tags"><span>AWS</span><span>Ansible</span><span>Amazon Linux 2023</span><span>EC2</span><span>Docker</span><span>Apache</span></div>
+            <div class="project-reference-section"><h4><i class="bi bi-journal-text"></i> Full Case Study</h4><p>Provisioned a three-node AWS infrastructure with one Ansible control node and two managed nodes using passwordless SSH. Automated Apache installation and configuration with playbooks and roles, then recreated the environment in a second AWS region from version-controlled configuration.</p></div>
+            <div class="project-reference-section"><h4><i class="bi bi-stack"></i> Full Tech Stack</h4><div class="project-tags"><span>AWS EC2</span><span>Ansible Navigator</span><span>Ansible Playbooks</span><span>Ansible Roles</span><span>Amazon Linux 2023</span><span>Docker</span><span>YAML</span><span>Apache</span><span>SSH</span><span>Git</span><span>GitHub</span></div></div>
+            <div class="project-reference-section"><h4><i class="bi bi-exclamation-triangle"></i> Challenges</h4><ul class="project-list"><li>Ensuring 100% repeatability across separate AWS regions.</li><li>Maintaining consistent SSH and network connectivity.</li><li>Preventing manual configuration drift.</li></ul></div>
+            <div class="project-reference-section"><h4><i class="bi bi-lightbulb"></i> Lessons Learned</h4><ul class="project-list"><li>Version-controlled playbooks are essential for disaster recovery.</li><li>Reusable roles support clean and predictable deployments.</li><li>Region-independent automation reduces operational risk.</li></ul></div>
+            <div class="project-actions">
+              <a href="https://github.com/nandusivadas/AWS-Infrastructure-Automation-using-Ansible" target="_blank" rel="noopener" class="btn btn-outline-light-custom btn-sm"><i class="bi bi-github me-1"></i>GitHub Repo</a>
+              <a href="./AWS_Ansible_Automation_Documentation.pdf" target="_blank" class="btn btn-accent btn-sm"><i class="bi bi-file-earmark-pdf-fill me-1"></i>Documentation</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-showcase">
+          <div class="project-cover">
+            <img src="./project-astra.svg" alt="Astra Linux GRUB and initramfs recovery project">
+          </div>
+          <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-4">
+            <span class="project-index">04</span>
+            <span class="project-heading">
+              <span class="project-name">Astra Linux System Recovery &amp; Troubleshooting</span>
+              <span class="project-kicker">Linux Bootloader Recovery &amp; Root-Cause Analysis</span>
+              <span class="project-summary">Diagnosed and restored a non-bootable Astra Linux system without data loss.</span>
+            </span>
+            <span class="project-icon" aria-hidden="true"><i class="bi bi-life-preserver"></i></span>
+            <span class="project-arrow" aria-hidden="true"><i class="bi bi-chevron-down"></i></span>
+          </button>
+          <div class="project-details" id="project-details-4" hidden>
+            <div class="project-tags project-full-tags"><span>Astra Linux</span><span>GRUB2</span><span>initramfs</span><span>Linux Boot</span><span>VMware</span></div>
+            <div class="project-reference-section"><h4><i class="bi bi-journal-text"></i> Full Case Study</h4><p>Diagnosed a non-bootable Astra Linux system caused by missing or damaged GRUB configuration. Used the GRUB rescue shell to inspect partitions, identify the root filesystem, locate kernel and initramfs files, and manually restore the boot process before regenerating GRUB configuration.</p></div>
+            <div class="project-reference-section"><h4><i class="bi bi-stack"></i> Full Tech Stack</h4><div class="project-tags"><span>Astra Linux</span><span>GRUB2</span><span>GRUB Rescue</span><span>initramfs</span><span>Linux Boot Process</span><span>Filesystem Analysis</span><span>VMware</span></div></div>
+            <div class="project-reference-section"><h4><i class="bi bi-exclamation-triangle"></i> Challenges</h4><ul class="project-list"><li>Identifying the correct root partition from rescue mode.</li><li>Locating and loading a valid kernel and initramfs.</li><li>Regenerating boot configuration without damaging existing data.</li></ul></div>
+            <div class="project-reference-section"><h4><i class="bi bi-lightbulb"></i> Lessons Learned</h4><ul class="project-list"><li>Bootloader recovery requires systematic filesystem inspection.</li><li>Manual kernel loading reveals failures hidden by normal startup.</li><li>GRUB configuration and initramfs integrity are critical for reliability.</li></ul></div>
+            <div class="project-actions">
+              <a href="./Astra_Linux_Documentation.pdf" target="_blank" class="btn btn-accent btn-sm"><i class="bi bi-file-earmark-pdf-fill me-1"></i>Documentation</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="project-grid" hidden>
         
         <!-- PROJECT #1 (MOST IMPORTANT): RHCE Capstone Project -->
         <div class="project-col">
@@ -631,9 +791,8 @@
     </div>
   </section>
 
-
   <!-- ========================================================================
-       STEP 7: WORK EXPERIENCE SECTION
+       STEP 8: WORK EXPERIENCE SECTION
        ======================================================================== -->
   <section id="experience" class="py-5 reveal-slide-left">
     <div class="container py-2">
@@ -651,7 +810,7 @@
           <div class="content-card p-3">
             <div class="experience-heading d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
               <div class="d-flex align-items-start gap-3">
-                <img class="experience-company-logo" src="https://media.licdn.com/dms/image/v2/D560BAQFwBiG9E_kQDg/company-logo_100_100/B56aCPTDL_JgAI-/0/1789110531021/ipsr_solutions_limited_logo?e=1794441600&amp;v=beta&amp;t=I_x3XNzuntTK9lRYdS5p2Plp6TtDs9ZJSB1SubVMAjI" alt="IPSR Solutions Ltd logo" loading="lazy">
+                <img class="experience-company-logo ipsr-company-logo" src="./ipsr-solutions-logo.png" alt="IPSR Solutions Ltd logo" loading="lazy">
                 <div>
                   <h3 class="card-heading text-white fs-5 mb-1">Cloud &amp; DevOps Intern</h3>
                   <span class="text-cyan ipsr-company small fw-bold d-block">ipsr solutions ltd · Internship</span>
@@ -669,7 +828,7 @@
           <div class="content-card p-3">
             <div class="d-flex justify-content-between align-items-start mb-2">
               <div class="d-flex align-items-start gap-3">
-                <img class="experience-company-logo" src="https://media.licdn.com/dms/image/v2/D560BAQGoHu_8ourOLw/company-logo_100_100/company-logo_100_100/0/1666849523452/nimmys_camera_store_logo?e=1794441600&amp;v=beta&amp;t=OliEYiwYfzy_U3zNMI-EWnPzuDEea_xq-OPaQtdJ9wQ" alt="Nimmys Camera Centre logo" loading="lazy">
+                <img class="experience-company-logo nimmys-company-logo" src="./nimmys-camera-centre-logo.png" alt="Nimmys Camera Centre logo" loading="lazy">
                 <div>
                   <h3 class="card-heading text-white fs-5 mb-1">Graphic Designer</h3>
                   <span class="text-cyan small fw-bold d-block">Nimmys Camera Centre · Full-time</span>
@@ -717,7 +876,7 @@
         <p class="section-subtitle">Academic degree and university qualifications</p>
       </div>
 
-      <div class="row justify-content-center">
+      <div class="row g-3 justify-content-center">
         <div class="col-lg-9">
           <div class="content-card p-4 text-center text-md-start d-flex flex-column flex-md-row align-items-center gap-4">
             
@@ -735,7 +894,7 @@
               </h4>
 
               <p class="text-slate small mb-2">
-                Affiliated to MG University, Kerala
+                Affiliated to MG University, Kerala · 2016 – 2020
               </p>
 
               <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
@@ -744,11 +903,34 @@
                 </span>
               </div>
 
-              <p class="card-text education-description text-slate mb-0 extra-small">
-                Built a foundation in <strong>mathematics, computer science fundamentals, algorithms, and relational databases.</strong>
-              </p>
             </div>
 
+          </div>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="content-card p-4 text-center text-md-start d-flex flex-column flex-md-row align-items-center gap-4">
+            <div class="edu-icon-box bg-accent-subtle text-cyan p-3 rounded-circle fs-2 flex-shrink-0">
+              <i class="bi bi-book-fill"></i>
+            </div>
+            <div class="flex-grow-1">
+              <h3 class="card-heading text-white fs-5 mb-1 fw-bold">Higher Secondary</h3>
+              <h4 class="text-cyan fs-6 fw-bold mb-1">St. Mary's H.S.S., Kidangoor</h4>
+              <p class="text-slate small mb-0">Kottayam, Kerala · 2014 – 2016</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="content-card p-4 text-center text-md-start d-flex flex-column flex-md-row align-items-center gap-4">
+            <div class="edu-icon-box bg-accent-subtle text-cyan p-3 rounded-circle fs-2 flex-shrink-0">
+              <i class="bi bi-book-fill"></i>
+            </div>
+            <div class="flex-grow-1">
+              <h3 class="card-heading text-white fs-5 mb-1 fw-bold">Secondary</h3>
+              <h4 class="text-cyan fs-6 fw-bold mb-1">Holy Cross H.S.S., Cherpunkal</h4>
+              <p class="text-slate small mb-0">Kottayam, Kerala · 2014</p>
+            </div>
           </div>
         </div>
       </div>
@@ -800,9 +982,8 @@
               <div class="cert-badge-icon bg-danger-subtle text-danger mx-auto mb-3">
                 <i class="devicon-redhat-plain colored fs-2"></i>
               </div>
-              <h3 class="card-heading text-white fs-6 mb-1">Red Hat Certified System Administrator (RHCSA)</h3>
-              <p class="text-slate small mb-3">Red Hat</p>
-              
+              <h3 class="card-heading text-white fs-6 mb-3">Red Hat Certified System Administrator (RHCSA)</h3>
+
               <div class="badge bg-success-subtle text-success px-3 py-2 fw-semibold mb-3">
                 <i class="bi bi-patch-check-fill me-1"></i> Certified
               </div>
@@ -814,7 +995,45 @@
           </div>
         </div>
 
-        <!-- Cert 3: RHCE -->
+        <!-- Cert 3: cPanel Professional -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card p-4 h-100 text-center d-flex flex-column justify-content-between">
+            <div>
+              <img class="cpanel-certificate-logo mx-auto mb-3" src="./cpanel-logo.png" alt="cPanel logo" loading="lazy">
+              <h3 class="card-heading text-white fs-6 mb-1">cPanel Professional Certification</h3>
+              <p class="text-cyan small fw-semibold mb-2">cPanel</p>
+
+              <div class="badge bg-success-subtle text-success px-3 py-2 fw-semibold mb-3">
+                <i class="bi bi-patch-check-fill me-1"></i> Certified
+              </div>
+            </div>
+
+            <a href="./cPanel_Professional_Certification.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm w-100 py-2">
+              <i class="bi bi-file-earmark-check-fill me-1"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 4: cPanel & WHM System Administrator I -->
+        <div class="col-md-6 col-lg-4">
+          <div class="content-card p-4 h-100 text-center d-flex flex-column justify-content-between">
+            <div>
+              <img class="cpanel-certificate-logo mx-auto mb-3" src="./cpanel-logo.png" alt="cPanel logo" loading="lazy">
+              <h3 class="card-heading text-white fs-6 mb-1">cPanel &amp; WHM System Administrator I Certification</h3>
+              <p class="text-cyan small fw-semibold mb-2">cPanel</p>
+
+              <div class="badge bg-success-subtle text-success px-3 py-2 fw-semibold mb-3">
+                <i class="bi bi-patch-check-fill me-1"></i> Certified
+              </div>
+            </div>
+
+            <a href="./cPanel_WHM_System_Administrator_I_Certification.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm w-100 py-2">
+              <i class="bi bi-file-earmark-check-fill me-1"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 5: RHCE -->
         <div class="col-md-6 col-lg-4">
           <div class="content-card p-4 h-100 text-center d-flex flex-column justify-content-between">
             <div>
@@ -822,9 +1041,8 @@
                 <i class="devicon-ansible-plain colored fs-2"></i>
               </div>
               <h3 class="card-heading text-white fs-6 mb-1">Red Hat Certified Engineer (RHCE)</h3>
-              <p class="text-slate small mb-3">Red Hat</p>
               
-              <div class="badge bg-cyan-subtle-pill text-cyan px-3 py-2 fw-semibold mb-3 border border-cyan-subtle">
+              <div class="badge bg-cyan-subtle-pill text-cyan px-3 py-2 fw-semibold mt-3 mb-3 border border-cyan-subtle">
                 <i class="bi bi-hourglass-split me-1"></i> In Progress
               </div>
             </div>
@@ -832,6 +1050,50 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INTERACTIVE PORTFOLIO TERMINAL
+       ======================================================================== -->
+  <section id="terminal" class="py-5 reveal-fade-up">
+    <div class="container py-2">
+      <div class="section-header text-center mb-4">
+        <h2 class="section-title terminal-title">Interactive <span>Terminal</span></h2>
+        <p class="section-subtitle">A Linux-like terminal. Try commands like <code>about</code>, <code>skills</code>, <code>projects</code>, or <code>sudo hire-me</code>.</p>
+      </div>
+
+      <div class="terminal-window" aria-label="Interactive portfolio terminal">
+        <div class="terminal-window-header">
+          <div class="terminal-window-controls" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-window-title">nandu@cloud-devops: ~</span>
+          <span class="terminal-status"><span aria-hidden="true"></span> connected</span>
+        </div>
+
+        <div class="terminal-screen">
+          <div id="terminal-output" class="terminal-output" role="log" aria-live="polite" aria-relevant="additions text">
+            <p class="terminal-welcome">Nandu Terminal v1.0.0 — Cloud &amp; DevOps Engineer</p>
+            <p class="terminal-welcome">Type "help" to see available commands.</p>
+          </div>
+          <form id="terminal-form" class="terminal-input-row" autocomplete="off">
+            <label class="terminal-prompt-text" for="terminal-command">nandu@cloud:~$</label>
+            <input id="terminal-command" name="command" type="text" aria-label="Enter a terminal command" autocomplete="off" autocapitalize="off" spellcheck="false">
+            <span class="terminal-cursor" aria-hidden="true"></span>
+          </form>
+        </div>
+
+        <div class="terminal-shortcuts" aria-label="Terminal command shortcuts">
+          <button type="button" data-terminal-command="help">help</button>
+          <button type="button" data-terminal-command="about">about</button>
+          <button type="button" data-terminal-command="skills">skills</button>
+          <button type="button" data-terminal-command="projects">projects</button>
+          <button type="button" data-terminal-command="aws">aws</button>
+          <button type="button" data-terminal-command="sudo hire-me">sudo hire-me</button>
+        </div>
+      </div>
+      <p class="terminal-note text-center">Portfolio-only simulation — no system commands are executed.</p>
     </div>
   </section>
 
@@ -864,6 +1126,8 @@
           <div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="tech-stack-card p-3 text-center h-100"><i class="devicon-mysql-plain colored fs-1 mb-2 d-block"></i><span class="fw-bold text-white small">MariaDB</span></div></div>
           <div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="tech-stack-card p-3 text-center h-100"><i class="devicon-apache-plain colored fs-1 mb-2 d-block"></i><span class="fw-bold text-white small">Apache</span></div></div>
           <div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="tech-stack-card p-3 text-center h-100"><i class="devicon-nginx-original colored fs-1 mb-2 d-block"></i><span class="fw-bold text-white small">Nginx</span></div></div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="tech-stack-card p-3 text-center h-100"><img src="./cpanel-logo.png" alt="cPanel" class="cpanel-tech-logo mb-2 d-block mx-auto"><span class="fw-bold text-white small">cPanel</span></div></div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="tech-stack-card p-3 text-center h-100"><img src="./whm-logo.png" alt="WHM" class="whm-tech-logo mb-2 d-block mx-auto"><span class="fw-bold text-white small">WHM</span></div></div>
         </div>
       </div>
     </div>
